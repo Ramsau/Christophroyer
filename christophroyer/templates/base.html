@@ -11,18 +11,33 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.css' %}">
 
+    <style>
+        img{
+            position: absolute;
+            left: 0;
+            height: 8em;
+            border-radius: 50%;
+            z-index: 100;
+            margin: 1em;
+        }
+
+        #topBar{
+            margin-top: 0 !important;
+        }
+    </style>
+
 </head>
 <body>
-<div class="ui top attached menu blue inverted" id="topBar">
+<img src="{% static "img/logo.png" %}"  onerror="$(this).css('background-color', 'white')";>
+<div class="ui top attached menu blue inverted" id="topBar" style="overflow: visible !important">
     <h1>Christoph Royer</h1>
-    <h3 class="mobile hidden">"Freiheit durch Wahrheit"</h3>
 </div>
 <div class="ui bottom attached segment">
     <div class="ui inverted left inline visible vertical teal thin sidebar menu">
-        <a class="item">Nothing</a>
-        <a class="item">To</a>
-        <a class="item">See</a>
-        <a class="item">Here</a>
+        <a class="item" href="/" style="margin-top: 2em;">Menü</a>
+        <a class="item">Projekte</a>
+        <a class="item">Aufträge</a>
+        <a class="item">Glaube</a>
     </div>
     <div class="pusher">
         <div class="ui basic segment">
