@@ -27,6 +27,18 @@
         #topBar{
             margin-top: 0 !important;
         }
+
+        #lang_buttons{
+            margin-right: 1rem;
+            height: 2rem;
+            vertical-align: middle;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        #lang_button > button{
+            background: white !important;
+        }
     </style>
 
 </head>
@@ -34,14 +46,9 @@
 <img src="{% static "img/logo.png" %}"  onerror="$(this).css('background-color', 'white')";>
 <div class="ui top attached menu blue inverted" id="topBar" style="overflow: visible !important">
     <h1>Christoph Royer</h1>
-    <div class="ui dropdown">
-        <input type="hidden" name="gender">
-        <i class="language icon"></i>
-        <div class="default text">Gender</div>
-        <div class="menu">
-            <div class="item" data-value="male">Male</div>
-            <div class="item" data-value="female">Female</div>
-        </div>
+    <div class="ui buttons right floated main menu white" id="lang_buttons">
+        <button class="ui button white"><img src="" alt=""></button>
+        <button class="ui button white"><img src="" alt=""></button>
     </div>
 </div>
 <div class="ui bottom attached segment">
