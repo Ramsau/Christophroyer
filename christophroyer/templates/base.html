@@ -12,48 +12,19 @@
     <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'semantic/semantic.min.js' %}"></script>
 
-
-
-    <style>
-        img{
-            position: absolute;
-            left: 0;
-            height: 8em;
-            border-radius: 50%;
-            z-index: 100;
-            margin: 1em;
-        }
-
-        #topBar{
-            margin-top: 0 !important;
-        }
-
-        #lang_buttons{
-            margin-right: 1rem;
-            height: 2rem;
-            vertical-align: middle;
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
-        #lang_button > button{
-            background: white !important;
-        }
-    </style>
-
 </head>
 <body>
-<img src="{% static "img/logo.png" %}"  onerror="$(this).css('background-color', 'white')";>
+<img src="{% static "img/logo.png" %}" id="logo" onerror="$(this).css('background-color', 'white')";>
 <div class="ui top attached menu blue inverted" id="topBar" style="overflow: visible !important">
     <h1>Christoph Royer</h1>
     <div class="ui buttons right floated main menu white" id="lang_buttons">
-        <button class="ui button white"><img src="" alt=""></button>
-        <button class="ui button white"><img src="" alt=""></button>
+        <button class="ui button white" style="background-image: url('{% static "img/de.png" %}')"></button>
+        <button class="ui button white"><img src="" alt="">test</button>
     </div>
 </div>
-<div class="ui bottom attached segment">
+<div class="ui bottom attached segment" id="nav_side">
     <div class="ui inverted left inline visible vertical teal thin sidebar menu">
-        <a class="item" href="/" style="margin-top: 2em;">Menü</a>
+        <a class="item" href="/">Menü</a>
         <a class="item">Projekte</a>
         <a class="item">Aufträge</a>
         <a class="item">Glaube</a>
