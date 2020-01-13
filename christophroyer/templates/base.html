@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,17 +18,24 @@
 <img src="{% static "img/logo.png" %}" id="logo" onerror="$(this).css('background-color', 'white')";>
 <div class="ui top attached menu blue inverted" id="topBar" style="overflow: visible !important">
     <h1>Christoph Royer</h1>
-    <div class="ui buttons right floated main menu white" id="lang_buttons">
-        <button class="ui button white" style="background-image: url('{% static "img/de.png" %}')"></button>
-        <button class="ui button white"><img src="" alt="">test</button>
-    </div>
+    <form class="ui buttons right floated main menu white" id="lang_buttons"
+        method="post" action="{% url 'set_language' %}">
+        {% csrf_token %}
+        {% get_current_language as languageCode %}
+        <button class="ui button white {% ifequal languageCode 'de' %}active{% endifequal %}"
+                style="background-image: url('{% static "img/de.png" %}')"
+                type="submit" name="language" value="de"></button>
+        <button class="ui button white {% ifequal languageCode 'en' %}active{% endifequal %}"
+                style="background-image: url('{% static "img/en.png" %}')"
+                type="submit" name="language" value="en"></button>
+    </form>
 </div>
 <div class="ui bottom attached segment" id="nav_side">
     <div class="ui inverted left inline visible vertical teal thin sidebar menu">
-        <a class="item" href="/">Menü</a>
-        <a class="item">Projekte</a>
-        <a class="item">Aufträge</a>
-        <a class="item">Glaube</a>
+        <a class="item" href="/">{% trans "Menu" %}</a>
+        <a class="item">{% trans "Projects" %}</a>
+        <a class="item">{% trans "Commissions" %}</a>
+        <a class="item">{% trans "Faith" %}</a>
     </div>
     <div class="pusher">
         <div class="ui basic segment">
