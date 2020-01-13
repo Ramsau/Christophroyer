@@ -33,7 +33,7 @@
 
 </head>
 <body>
-<img src="{% static "img/logo.png" %}" id="logo" onerror="$(this).css('background-color', 'white')";>
+<a href="/"><img src="{% static "img/logo.png" %}" id="logo" onerror="$(this).css('background-color', 'white')" onclick=""></a>
 <div class="ui top attached menu blue inverted" id="topBar" style="overflow: visible !important">
     <h1>Christoph Royer</h1>
     <form class="ui buttons right floated main menu white" id="lang_buttons"
@@ -50,12 +50,18 @@
 </div>
 <div class="ui bottom attached segment" id="nav_side">
     <div class="ui inverted left inline visible vertical teal thin sidebar menu">
-        <a class="item" href="/">{% trans "Menu" %}</a>
-        <a class="item">{% trans "Projects" %}</a>
-        <a class="item">{% trans "Commissions" %}</a>
-        <a class="item">{% trans "Faith" %}</a>
+        {% block menu_items %}
+        {% url 'index' as url %}
+        <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Start" %}</a>
+        {% url 'projects' as url %}
+        <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Projects" %}</a>
+        {% url 'commisions' as url %}
+        <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Commissions" %}</a>
+        {% url 'faith' as url %}
+        <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Faith" %}</a>
+        {% endblock %}
     </div>
-    <div class="pusher">
+    <div class="pusher" id="page-content">
         <div class="ui basic segment">
             {% block content %}
             {% endblock %}

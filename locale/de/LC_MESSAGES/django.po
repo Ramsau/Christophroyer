@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 08:35+0000\n"
+"POT-Creation-Date: 2020-01-13 16:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: christophroyer/settings.py:120
+#: christophroyer/settings.py:124
 msgid "German"
 msgstr "Deutsch"
 
-#: christophroyer/settings.py:121
+#: christophroyer/settings.py:125
 msgid "English"
 msgstr "Englisch"
 
-#: christophroyer/templates/base.html:35
-msgid "Menu"
-msgstr "Menü"
+#: christophroyer/templates/base.html:53
+msgid "Start"
+msgstr ""
 
-#: christophroyer/templates/base.html:36
+#: christophroyer/templates/base.html:54
 msgid "Projects"
 msgstr "Projekte"
 
-#: christophroyer/templates/base.html:37
+#: christophroyer/templates/base.html:55
 msgid "Commissions"
 msgstr "Aufträge"
 
-#: christophroyer/templates/base.html:38
+#: christophroyer/templates/base.html:56
 msgid "Faith"
 msgstr "Glaube"
 
@@ -49,6 +49,9 @@ msgstr "Wie Sie sehen, sehen Sie nichts"
 #: christophroyer/templates/index.html:10
 msgid "I'm Christoph Royer's website, I am still being built."
 msgstr "Ich bin Christoph Royers Website, ich werde noch gebaut."
+
+#~ msgid "Menu"
+#~ msgstr "Menü"
 
 #~ msgid "About"
 #~ msgstr "Über"

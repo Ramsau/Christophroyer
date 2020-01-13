@@ -6,6 +6,13 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{% trans "As you can see, you can't see anything" %}</h1>
-    <h4>{% trans "I'm Christoph Royer's website, I am still being built." %}</h4>
+    {% blocktrans %}
+        <h1>Hi, I'm Christoph.</h1>
+        <p>I'm a self-taught programmer, making whatever comes to mind. I can't tell you what is my specialty -
+            I just use the tools at my disposal. Tell the world about myself - make a website. Shoot nerf darts -
+            make an autonomous turret with face recognition. Don't want to get up to turn off the lights - bolt a servo
+            to the wall. Go wild.
+        </p>
+        <p></p>
+    {% endblocktrans %}
 {% endblock %}
