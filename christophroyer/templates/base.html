@@ -30,11 +30,15 @@
 
     <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'semantic/semantic.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 
 </head>
-<body>
-<a href="/"><img src="{% static "img/logo.png" %}" id="logo" onerror="$(this).css('background-color', 'white')" onclick=""></a>
-<div class="ui top attached menu blue inverted" id="topBar" style="overflow: visible !important">
+<body
+    onresize="onResize()">
+<a href="/"><img src="{% static "img/logo.png" %}" id="logo" onerror="$(this).css('background-color', 'white')"></a>
+<div class="ui top attached menu blue inverted" id="topBar" style="position: relative;">
+    <button class="ui button" style="position: absolute; bottom: 1em; left: 1em; height: 2em; width: 2em; padding: 0"
+        onclick="$('#nav_side .sidebar').sidebar('toggle')"><i class="list icon" id="sidebar_button" style="margin: auto"></i></button>
     <h1>Christoph Royer</h1>
     <form class="ui buttons right floated main menu white" id="lang_buttons"
         method="post" action="{% url 'set_language' %}">
@@ -72,7 +76,7 @@
 
 <script>
     $('.ui.sidebar').sidebar({
-        context: $('.bottom.segment')
-    })
+        context: $('.bottom.segment'),
+    }).sidebar('setting', 'dimPage', false).sidebar('setting', 'closable', false)
 </script>
 </html>
