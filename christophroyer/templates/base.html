@@ -32,6 +32,19 @@
     <script type="text/javascript" src="{% static 'semantic/semantic.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 
+    <style>
+        #nav_side > .pusher > #page_content{
+            padding: 14px;
+        }
+
+        .sidebar.visible ~ .pusher > #page_content{
+            padding-right: 164px !important;
+        }
+
+        #nav_side{
+            border: none;
+        }
+    </style>
 </head>
 <body
     onresize="onResize()">
@@ -65,7 +78,7 @@
         <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Faith" %}</a>
         {% endblock %}
     </div>
-	<div class="ui basic segment" id="page_content">
+	<div id="page_content">
         {% block content %}
         {% endblock %}
     </div>
