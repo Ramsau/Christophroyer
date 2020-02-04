@@ -65,7 +65,7 @@
         <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Faith" %}</a>
         {% endblock %}
     </div>
-	<div class="ui basic segment">
+	<div id="page_content">
         {% block content %}
         {% endblock %}
     </div>
