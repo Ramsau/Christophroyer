@@ -38,20 +38,22 @@
     onresize="onResize()">
 <a href="/"><img src="{% static "img/logo.png" %}" id="logo" onerror="$(this).css('background-color', 'white')"></a>
 <div class="ui top attached menu blue inverted" id="topBar" style="position: relative;">
-    <button class="ui button" id="sidebar_button" style="position: absolute; bottom: 1em; left: 1em; height: 2em; width: 2em; padding: 0"
+    <button class="ui button white" id="sidebar_button"
         onclick="$('#nav_side .sidebar').sidebar('toggle')"><i class="list icon" style="margin: auto"></i></button>
-    <h1>Christoph Royer</h1>
-    <form class="ui buttons right floated main menu white" id="lang_buttons"
-        method="post" action="{% url 'set_language' %}">
-        {% csrf_token %}
-        {% get_current_language as languageCode %}
-        <button class="ui button white {% ifequal languageCode 'de' %}active{% endifequal %}"
-                style="background-image: url('{% static "img/de.png" %}')"
-                type="submit" name="language" value="de"></button>
-        <button class="ui button white {% ifequal languageCode 'en' %}active{% endifequal %}"
-                style="background-image: url('{% static "img/en.png" %}')"
-                type="submit" name="language" value="en"></button>
-    </form>
+    <h1>
+        Christoph Royer
+        <form class="ui buttons right floated main menu white" id="lang_buttons"
+            method="post" action="{% url 'set_language' %}">
+            {% csrf_token %}
+            {% get_current_language as languageCode %}
+            <button class="ui button white {% ifequal languageCode 'de' %}active{% endifequal %}"
+                    style="background-image: url('{% static "img/de.png" %}')"
+                    type="submit" name="language" value="de"></button>
+            <button class="ui button white {% ifequal languageCode 'en' %}active{% endifequal %}"
+                    style="background-image: url('{% static "img/en.png" %}')"
+                    type="submit" name="language" value="en"></button>
+        </form>
+    </h1>
 </div>
 <div class="ui bottom attached segment" id="nav_side">
     <div class="ui inverted left inline visible vertical teal thin sidebar menu">
