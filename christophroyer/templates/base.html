@@ -58,14 +58,17 @@
 <div class="ui bottom attached segment" id="nav_side">
     <div class="ui inverted left inline visible vertical teal thin sidebar menu">
         {% block menu_items %}
-        {% url 'index' as url %}
-        <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Start" %}</a>
-        {% url 'projects' as url %}
-        <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Projects" %}</a>
-        {% url 'commisions' as url %}
-        <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Commissions" %}</a>
-        {% url 'faith' as url %}
-        <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Faith" %}</a>
+            {% url 'index' as url %}
+            <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Start" %}</a>
+
+            {% url 'projects' as url %}
+            <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Projects" %}</a>
+
+            {% url 'commisions' as url %}
+            <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Commissions" %}</a>
+
+            {% url 'faith' as url %}
+            <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Faith" %}</a>
         {% endblock %}
     </div>
 	<div id="page_content">

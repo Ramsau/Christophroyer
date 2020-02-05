@@ -23,5 +23,10 @@ import christophroyer.views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', v.index, name='index'),
+
     path('i18n/', include('django.conf.urls.i18n'), name='set_language')
 ]
+
+urlpatterns += i18n_patterns(
+    path(_('Projects'), v.projects, name='projects'),
+)
