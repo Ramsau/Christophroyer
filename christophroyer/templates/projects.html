@@ -7,6 +7,10 @@
 
 {% block content %}
     {% for project in projects %}
-        <h2>{{ project.name }}</h2><br>
+        <div class="project">
+            <h2>{{ project.name }}</h2>
+            <p>{{ project.text1 }}</p>
+            <p>{{ project.text2 }}</p>
+        </div>
     {% endfor %}
 {% endblock %}

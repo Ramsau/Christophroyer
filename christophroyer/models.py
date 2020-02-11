@@ -19,7 +19,26 @@ class Project(models.Model):
     def text(self):
         lang = get_language()
         if lang == 'en':
-            return self.text_en
+            text = self.text_en
         else:
-            return self.text_de
+            text = self.text_de
+
+        return text.replace('\\', '')
+
+    def text1(self):
+        lang = get_language()
+        if lang == 'en':
+            text = self.text_en
+        else:
+            text = self.text_de
+        return text.partition('\\')[0]
+
+    def text2(self):
+        lang = get_language()
+        if lang == 'en':
+            text = self.text_en
+        else:
+            text = self.text_de
+        return text.partition('\\')[2]
+
 
