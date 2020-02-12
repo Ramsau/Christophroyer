@@ -6,21 +6,23 @@
 {% endblock %}
 
 {% block content %}
-    <div class="segments projects">{% for project in projects %}
-        <div class="ui segment project">
-            <h2>{{ project.name }}</h2>
-            <p>{{ project.text1 }}
-                <div class="ui accordion inline">
-                    <div class="active title">
-                        <p><u>{% trans "Read more..." %}</u></p>
+    <div class="segments projects">
+        {% for project in projects %}
+            <div class="ui segment project">
+                <h2>{{ project.name }}</h2>
+                <p>{{ project.text1 }}
+                    <div class="ui accordion inline">
+                        <div class="active title">
+                            <p><u>{% trans "Read more..." %}</u></p>
+                        </div>
+                        <div class="content">
+                            <p>{{ project.text2 }}</p>
+                        </div>
                     </div>
-                    <div class="content">
-                        {{ project.text2 }}
-                    </div>
-                </div>
-            </p>
-        </div>
-    {% endfor %}</div>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
 
 {% block js %}
