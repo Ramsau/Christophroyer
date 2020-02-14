@@ -8,12 +8,13 @@
 {% block content %}
     <div class="segments projects">
         {% for project in projects %}
+            <div>
             <div class="ui segment project">
                 <h2>{{ project.name }}</h2>
                 <p>{{ project.text1 }}
                     <div class="ui accordion inline">
                         <div class="active title">
-                            <p><u>{% trans "Read more..." %}</u></p>
+                            <p class="readMore"><u>{% trans "Read more..." %}</u></p>
                         </div>
                         <div class="content">
                             <p>{{ project.text2 }}</p>
@@ -21,12 +22,32 @@
                     </div>
                 </p>
             </div>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}
 
 {% block js %}
     <script>
-       $('.ui.accordion').accordion();
+       $('.ui.accordion').accordion(
+           {
+               onOpening: function(){
+                   let content = $(this)
+                   let more = $('.readMore', content.parent());
+                   more.hide(300);
+
+               }
+           }
+       )
+
+
+       $(document).mouseup(function(e){
+           let content = $('.accordion > .content.active');
+
+           if(!content.is(e.target) && content.has(e.target).length === 0){
+               content.parent().accordion('close', 0)
+               $('.readMore', content.parent()).show(300);
+           }
+       })
     </script>
 {% endblock %}
