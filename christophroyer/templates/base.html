@@ -27,12 +27,20 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.css' %}">
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/transition.min.css'>
 
     <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'semantic/semantic.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 
     <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+    <style>
+        #nav_side{
+            overflow-x: visible;
+            height: auto;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body
     onresize="onResize()">
@@ -58,14 +66,17 @@
 <div class="ui bottom attached segment" id="nav_side">
     <div class="ui inverted left inline visible vertical teal thin sidebar menu">
         {% block menu_items %}
-        {% url 'index' as url %}
-        <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Start" %}</a>
-        {% url 'projects' as url %}
-        <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Projects" %}</a>
-        {% url 'commisions' as url %}
-        <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Commissions" %}</a>
-        {% url 'faith' as url %}
-        <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Faith" %}</a>
+            {% url 'index' as url %}
+            <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Start" %}</a>
+
+            {% url 'projects' as url %}
+            <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Projects" %}</a>
+
+            {% url 'commisions' as url %}
+            <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Commissions" %}</a>
+
+            {% url 'faith' as url %}
+            <a class="item {% ifequal url request.path%}active{% endifequal %} disabled" href="{{ url }}">{% trans "Faith" %}</a>
         {% endblock %}
     </div>
 	<div id="page_content">
@@ -79,5 +90,7 @@
     $('.ui.sidebar').sidebar({
         context: $('.bottom.segment'),
     }).sidebar('setting', 'dimPage', false).sidebar('setting', 'closable', false)
+
 </script>
+{% block js %}{% endblock %}
 </html>

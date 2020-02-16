@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 10:05+0000\n"
+"POT-Creation-Date: 2020-02-12 21:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,19 +26,20 @@ msgstr "Deutsch"
 msgid "English"
 msgstr "Englisch"
 
-#: christophroyer/templates/base.html:55
+#: christophroyer/templates/base.html:62
 msgid "Start"
 msgstr ""
 
-#: christophroyer/templates/base.html:57
+#: christophroyer/templates/base.html:65
+#: christophroyer/templates/projects.html:5 christophroyer/urls.py:31
 msgid "Projects"
 msgstr "Projekte"
 
-#: christophroyer/templates/base.html:59
+#: christophroyer/templates/base.html:68
 msgid "Commissions"
 msgstr "Aufträge"
 
-#: christophroyer/templates/base.html:61
+#: christophroyer/templates/base.html:71
 msgid "Faith"
 msgstr "Glaube"
 
@@ -75,14 +76,19 @@ msgstr ""
 "            an die Wand und mach eine Handy-App. Tob dich aus.\n"
 "        </p>\n"
 "        <h3>Nie mit dem Bekannten zufrieden geben.</h3>\n"
-"        <p>In einer digitalen Welt, wo alles ohne "
-"Aufwand exakt kopiert werden kann, ist es für mich besonders wichtig,\n"
-"            immer weiter zu verbessern, anders zu denken und neu zu erfinden. Wie könnte man "
-"auch herausstechen, wenn man nur andere kopiert?<br>\n"
+"        <p>In einer digitalen Welt, wo alles ohne Aufwand exakt kopiert "
+"werden kann, ist es für mich besonders wichtig,\n"
+"            immer weiter zu verbessern, anders zu denken und neu zu "
+"erfinden. Wie könnte man auch herausstechen, wenn man nur andere kopiert?"
+"<br>\n"
 "            Deshalb ist jedes meiner Projekte eigens für seinen Zweck "
 "entwickelt - was jedem Werk seinen eigenen Charakter gibt.\n"
 "        </p>\n"
 "    "
+
+#: christophroyer/templates/projects.html:15
+msgid "Read more..."
+msgstr "Mehr..."
 
 #~ msgid "As you can see, you can't see anything"
 #~ msgstr "Wie Sie sehen, sehen Sie nichts"
