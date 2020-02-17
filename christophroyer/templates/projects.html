@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 
 {% block title %}
     {% trans "Projects" %} - Christoph Royer
@@ -10,6 +11,7 @@
         {% for project in projects %}
             <div class="ui segment project">
                 <h2>{{ project.name }}</h2>
+                <img src="{% static "img/projects/" %}{{ project.id }}.jpg" alt="{% trans "Image" %} - {{ project.name }}">
                 <p>{{ project.text1 }}
                     <div class="ui accordion inline">
                         <div class="active title">
