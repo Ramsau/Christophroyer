@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 
 {% block title %}
     {% trans "Projects" %} - Christoph Royer
@@ -8,10 +9,11 @@
 {% block content %}
     <div class="segments projects">
         {% for project in projects %}
-            <div>
             <div class="ui segment project">
                 <h2>{{ project.name }}</h2>
-                <p>{{ project.text1 }}
+                <p>
+                    <img src="{% static "img/projects/" %}{{ project.id }}.jpg" alt="{% trans "Image" %} - {{ project.name }}">
+                    {{ project.text1 }}
                     <div class="ui accordion inline">
                         <div class="active title">
                             <p class="readMore"><u>{% trans "Read more..." %}</u></p>
@@ -22,7 +24,6 @@
                     </div>
                 </p>
             </div>
-            </div>
         {% endfor %}
     </div>
 {% endblock %}
@@ -31,6 +32,7 @@
     <script>
        $('.ui.accordion').accordion(
            {
+               duration: 300,
                onOpening: function(){
                    let content = $(this)
                    let more = $('.readMore', content.parent());
