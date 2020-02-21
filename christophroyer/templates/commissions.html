@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <h1>{% trans "Commissions" %}</h1>
+    {% blocktrans %}
+        <p>
+            I would love to hear your project ideas or software requests - the more exotic, the better.
+            Whether it's about a piece of software or website I can design for your business or a novel idea we can
+            take co-ownership of - Let's see what we can do together!
+        </p>
+        <p>
+            After you write to me, we can get together to work out a concept or write via E-mail or - of course free of
+            charge and without commitment. I provide quick, personal feedback when it comes to questions, requests or errors in my work -
+            not the impersonal, slow-moving customer service known from big companies. So get in touch, I'm looking
+            forward to hearing from you!
+        </p>
+    {% endblocktrans %}
+    <br><p>{% trans "Mail" %}: <a href="mailto:mail@christophroyer.com">mail@christophroyer.com</a></p>
+{% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-21 09:56+0000\n"
+"POT-Creation-Date: 2020-02-21 10:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,11 +36,34 @@ msgid "Projects"
 msgstr ""
 
 #: christophroyer/templates/base.html:69
+#: christophroyer/templates/commissions.html:5 christophroyer/urls.py:32
 msgid "Commissions"
 msgstr ""
 
-#: christophroyer/templates/base.html:72
-msgid "Faith"
+#: christophroyer/templates/commissions.html:6
+msgid ""
+"\n"
+"        <p>\n"
+"            I would love to hear your project ideas or software requests - "
+"the more exotic, the better.\n"
+"            Whether it's about a piece of software or website I can design "
+"for your business or a novel idea we can\n"
+"            take co-ownership of - Let's see what we can do together!\n"
+"        </p>\n"
+"        <p>\n"
+"            After you write to me, we can get together to work out a concept "
+"or write via E-mail or - of course free of\n"
+"            charge and without commitment. I provide quick, personal "
+"feedback when it comes to questions, requests or errors in my work -\n"
+"            not the impersonal, slow-moving customer service known from big "
+"companies. So get in touch, I'm looking\n"
+"            forward to hearing from you!\n"
+"        </p>\n"
+"    "
+msgstr ""
+
+#: christophroyer/templates/commissions.html:19
+msgid "Mail"
 msgstr ""
 
 #: christophroyer/templates/index.html:10
