@@ -41,4 +41,6 @@ class Project(models.Model):
             text = self.text_de
         return text.partition('\\')[2]
 
+    class Meta:
+        ordering = ('-time_created', )
 
