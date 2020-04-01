@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 18:05+0000\n"
+"POT-Creation-Date: 2020-04-01 18:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,12 +31,12 @@ msgid "Start"
 msgstr ""
 
 #: christophroyer/templates/base.html:66
-#: christophroyer/templates/projects.html:6 christophroyer/urls.py:31
+#: christophroyer/templates/projects.html:6 christophroyer/urls.py:32
 msgid "Projects"
 msgstr "Projekte"
 
 #: christophroyer/templates/base.html:69
-#: christophroyer/templates/commissions.html:5 christophroyer/urls.py:32
+#: christophroyer/templates/commissions.html:5 christophroyer/urls.py:33
 msgid "Commissions"
 msgstr "Aufträge"
 
@@ -173,6 +173,14 @@ msgstr ""
 "kleinere Stücke verschiedenster anderer Frameworks.\n"
 "        </p>\n"
 "    "
+
+#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:31
+msgid "Privacy"
+msgstr "Datenschutz"
+
+#: christophroyer/templates/privacy.html:9
+msgid "I'm not tracking or storing anything at the moment."
+msgstr "Ich analysiere oder speichere zur Zeit gar nichts."
 
 #: christophroyer/templates/projects.html:15
 msgid "Image"

@@ -28,6 +28,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
+    path(_('Privacy'), v.privacy, name='privacy'),
     path(_('Projects'), v.projects, name='projects'),
     path(_('Commissions'), v.commissions, name='commissions')
 )
