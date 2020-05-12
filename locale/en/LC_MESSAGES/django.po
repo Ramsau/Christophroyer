@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 18:55+0000\n"
+"POT-Creation-Date: 2020-05-12 17:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: christophroyer/settings.py:124
+#: christophroyer/settings.py:127
 msgid "German"
 msgstr ""
 
-#: christophroyer/settings.py:125
+#: christophroyer/settings.py:128
 msgid "English"
 msgstr ""
 
@@ -38,6 +38,14 @@ msgstr ""
 #: christophroyer/templates/base.html:69
 #: christophroyer/templates/commissions.html:5 christophroyer/urls.py:33
 msgid "Commissions"
+msgstr ""
+
+#: christophroyer/templates/base.html:80
+msgid "Then you will know the truth, and the truth will set you free."
+msgstr ""
+
+#: christophroyer/templates/base.html:80
+msgid "John 8:32"
 msgstr ""
 
 #: christophroyer/templates/commissions.html:6
