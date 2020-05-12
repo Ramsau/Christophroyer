@@ -13,13 +13,13 @@
                 <h2>{{ project.name }}</h2>
                 <p>
                     <img src="{% static "img/projects/" %}{{ project.id }}.jpg" alt="{% trans "Image" %} - {{ project.name }}">
-                    {{ project.text1 }}
+                    {{ project.text1|safe }}
                     <div class="ui accordion inline">
                         <div class="active title">
                             <p class="readMore"><u>{% trans "Read more..." %}</u></p>
                         </div>
                         <div class="content">
-                            <p>{{ project.text2 }}</p>
+                            <p>{{ project.text2|safe }}</p>
                         </div>
                     </div>
                 </p>
