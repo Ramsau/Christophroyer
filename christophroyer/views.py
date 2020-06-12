@@ -30,16 +30,16 @@ def commissions(request):
         # send mail with the necessary details to me (and maybe a copy to user)
         if form.is_valid:
             data = form.data
-            #try:
-            send_mail(
-                gt('Project request') + data.get('title'),
-                data.get('name') + data.get('mail') + data.get('tel') + data.get('text'),
-                settings.EMAIL_HOST_USER,
-                [settings.EMAIL_REQUEST_RECIPIENT],
-                fail_silently=False
-            )
-            #except:
-            #    return HttpResponse(_('Error while sending mail, please try again later'), status=500)
+            try:
+                send_mail(
+                    gt('Project request') + ' ' + data.get('title'),
+                    data.get('name') + data.get('mail') + data.get('tel') + data.get('text'),
+                    settings.EMAIL_HOST_USER,
+                    [settings.EMAIL_REQUEST_RECIPIENT],
+                    fail_silently=False
+                )
+            except:
+                return HttpResponse(_('Error while sending mail, please try again later'), status=500)
 
             return HttpResponse(_('Your request was sent - I\'ll get in touch soon!'))
         else:
