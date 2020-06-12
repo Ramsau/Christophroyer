@@ -32,7 +32,7 @@ def commissions(request):
             data = form.data
             try:
                 send_mail(
-                    gt('Project request') + ' ' + data.get('title'),
+                    gt('Project request') + ': ' + data.get('title'),
                     data.get('name') + data.get('mail') + data.get('tel') + data.get('text'),
                     settings.EMAIL_HOST_USER,
                     [settings.EMAIL_REQUEST_RECIPIENT],

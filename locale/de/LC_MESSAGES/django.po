@@ -230,10 +230,8 @@ msgid "I'm not tracking or storing anything at the moment."
 msgstr "Ich analysiere oder speichere zur Zeit gar nichts."
 
 #: christophroyer/templates/privacy.html:11
-#, fuzzy
-#| msgid "Commissions"
 msgid "Commission requests"
-msgstr "Aufträge"
+msgstr "Auftragsformular"
 
 #: christophroyer/templates/privacy.html:12
 msgid ""
