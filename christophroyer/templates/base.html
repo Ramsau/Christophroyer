@@ -35,8 +35,18 @@
 
     <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
 </head>
-<body
-    onresize="onResize()">
+<body onresize="onResize()">
+<div id="alert-wrapper">
+    <div id="alert-success" class="alert hidden">
+        <h1>Success</h1> <i class="close icon"></i>
+    </div>
+    <div id="alert-info" class="alert hidden">
+        <h1>Info</h1> <i class="close icon"></i>
+    </div>
+    <div id="alert-error" class="alert hidden">
+        <h1>Error</h1> <i class="close icon"></i>
+    </div>
+</div>
 <a href="/"><img src="{% static "img/logo.png" %}" id="logo" onerror="$(this).css('background-color', 'white')"></a>
 <div class="ui top attached menu blue inverted" id="topBar" style="position: relative;">
     <button class="ui button white" id="sidebar_button"
@@ -76,7 +86,7 @@
 </div>
 <div id="footer">
     <div>
-        <div>© Christoph Royer 2020 | <a href="{% url 'privacy' %}">Datenschutz</a></div>
+        <div>© Christoph Royer 2020 | <a href="{% url 'privacy' %}">{% trans "Privacy" %}</a></div>
         <div><i>"{% trans "Then you will know the truth, and the truth will set you free." %}"</i> <small>{% trans "John 8:32" %}</small></div>
         <div>
             <a href="https://instagram.com/der_royer" target="_blank"><i class="instagram icon"></i></a>

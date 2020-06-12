@@ -16,5 +16,31 @@
             forward to hearing from you!
         </p>
     {% endblocktrans %}
-    <br><p>{% trans "Mail" %}: <a href="mailto:mail@christophroyer.com">mail@christophroyer.com</a></p>
+    <p>{% trans "Mail" %}: <a href="mailto:mail@christophroyer.com">mail@christophroyer.com</a></p>
+    <br>
+
+    <form id="requestForm">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button class="ui button white">{% trans "Send" %}</button>
+    </form>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $('#requestForm').submit(function(event){
+            event.preventDefault();
+            $.ajax({
+                url: '{% url 'commissions' %}',
+                method: 'POST',
+                data: $('#requestForm').serialize(),
+                error: function(response){
+                    showError(response.responseText);
+                },
+                success: function(response){
+                    showSuccess(response);
+                }
+            })
+        })
+    </script>
 {% endblock %}
