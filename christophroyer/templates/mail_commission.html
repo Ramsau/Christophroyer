@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <style>
     #header{
         position: fixed;
@@ -25,10 +27,14 @@
 
 <div id="header"><b>{% trans "Project request" %}: {{ title }}</b></div>
 <div id="text">
-    {{ name }}(<a href="mailto:{{ mail }}">{{ mail }}</a>{% if tel %}/<a href="tel:{{ tel }}">{{ ŧel }}{% endif %})</a>
-    {% trans "proposed the following project:" %}<br>
+    {{ name }}(<a href="mailto:{{ mail }}">{{ mail }}</a>{% if tel %}/<a href="tel:{{ tel }}">{{ tel }}</a>{% endif %})
+    {% trans "proposed the following project:" %}<br><br>
     <b>{{ title }}</b><br>
     {{ text }}
+    <br><br>
+    <small>{% trans "This message was sent from"%} <a href="https://christophroyer.com">christophroyer.com</a> -
+    {% trans "If you didn't use this website, tell me via E-Mail" %} (<a href="mailto:mail@christophroyer.com">mail@christophroyer.com</a>)
+    {% trans "and i will discard your information" %}</small>
 </div>
 
 

@@ -30,6 +30,7 @@
     <script>
         $('#requestForm').submit(function(event){
             event.preventDefault();
+            showInfo('{% trans "Sending mail, please wait..." %}');
             $.ajax({
                 url: '{% url 'commissions' %}',
                 method: 'POST',
