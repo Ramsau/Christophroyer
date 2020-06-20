@@ -6,5 +6,12 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{% trans "I'm not tracking or storing anything at the moment." %}</h1>
+    <h1>{% trans "Website use" %}</h1>
+    <p>{% trans "I'm not tracking or storing anything at the moment." %}</p>
+    <h1>{% trans "Commission requests" %}</h1>
+    <p>{% blocktrans %}
+        When using the request form, you agree that your data will be handled accordingly.
+        Nothing will be stored in a database, but an e-mail containing your information will be sent to mail@christophroyer.com
+        (and to the given mail address if you so wish).
+    {% endblocktrans %}</p>
 {% endblock %}>

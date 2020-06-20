@@ -1,0 +1,42 @@
+{% load i18n %}
+
+<style>
+    #header{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        font-size: 15pt;
+        background-color: #2f63c9;
+        display: flex;
+        flex-direction: column;
+        padding: 3pt;
+        margin-bottom: 5pt;
+        color: white;
+    }
+
+    #text{
+        margin-top: 25pt;
+    }
+
+    table{
+        margin-top: 4pt;
+        font-size: 11pt;
+    }
+</style>
+
+<div id="header"><b>{% trans "Project request" %}: {{ title }}</b></div>
+<div id="text">
+    {{ name }}(<a href="mailto:{{ mail }}">{{ mail }}</a>{% if tel %}/<a href="tel:{{ tel }}">{{ tel }}</a>{% endif %})
+    {% trans "proposed the following project:" %}<br><br>
+    <b>{{ title }}</b><br>
+    {{ text }}
+    <br><br>
+    <small>{% trans "This message was sent from"%} <a href="https://christophroyer.com">christophroyer.com</a> -
+    {% trans "If you didn't use this website, tell me via E-Mail" %} (<a href="mailto:mail@christophroyer.com">mail@christophroyer.com</a>)
+    {% trans "and i will discard your information" %}</small>
+</div>
+
+
+
+
