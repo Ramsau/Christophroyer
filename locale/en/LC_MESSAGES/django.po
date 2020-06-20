@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-12 10:00+0000\n"
+"POT-Creation-Date: 2020-06-20 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,11 +47,11 @@ msgstr ""
 msgid "I agree with the <a href=\"{0}\">Terms of service</a>*"
 msgstr ""
 
-#: christophroyer/settings.py:127
+#: christophroyer/settings.py:122
 msgid "German"
 msgstr ""
 
-#: christophroyer/settings.py:128
+#: christophroyer/settings.py:123
 msgid "English"
 msgstr ""
 
@@ -112,6 +112,10 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
+#: christophroyer/templates/commissions.html:33
+msgid "Sending mail, please wait..."
+msgstr ""
+
 #: christophroyer/templates/index.html:10
 msgid ""
 "\n"
@@ -161,6 +165,26 @@ msgid ""
 "    "
 msgstr ""
 
+#: christophroyer/templates/mail_commission.html:28 christophroyer/views.py:43
+msgid "Project request"
+msgstr ""
+
+#: christophroyer/templates/mail_commission.html:31 christophroyer/views.py:45
+msgid "proposed the following project:"
+msgstr ""
+
+#: christophroyer/templates/mail_commission.html:35
+msgid "This message was sent from"
+msgstr ""
+
+#: christophroyer/templates/mail_commission.html:36
+msgid "If you didn't use this website, tell me via E-Mail"
+msgstr ""
+
+#: christophroyer/templates/mail_commission.html:37
+msgid "and i will discard your information"
+msgstr ""
+
 #: christophroyer/templates/privacy.html:9
 msgid "Website use"
 msgstr ""
@@ -192,14 +216,21 @@ msgstr ""
 msgid "Read more..."
 msgstr ""
 
-#: christophroyer/views.py:42
+#: christophroyer/views.py:48
+msgid ""
+"This message was sent from christophroyer.com - If you didn't use this "
+"website, tell me via E-Mail (mail@christophroyer.com) and I will discard "
+"your information"
+msgstr ""
+
+#: christophroyer/views.py:74
 msgid "Error while sending mail, please try again later"
 msgstr ""
 
-#: christophroyer/views.py:44
+#: christophroyer/views.py:76
 msgid "Your request was sent - I'll get in touch soon!"
 msgstr ""
 
-#: christophroyer/views.py:46
+#: christophroyer/views.py:78
 msgid "Invalid data - please check your inputs for errors"
 msgstr ""
