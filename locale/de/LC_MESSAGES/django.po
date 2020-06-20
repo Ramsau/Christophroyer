@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-12 10:00+0000\n"
+"POT-Creation-Date: 2020-06-20 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,11 +47,11 @@ msgstr "Kopie an mich senden"
 msgid "I agree with the <a href=\"{0}\">Terms of service</a>*"
 msgstr "Ich stimme den <a href=\"{0}\">Nutzungsbestimmungen</a> zu*"
 
-#: christophroyer/settings.py:127
+#: christophroyer/settings.py:122
 msgid "German"
 msgstr "Deutsch"
 
-#: christophroyer/settings.py:128
+#: christophroyer/settings.py:123
 msgid "English"
 msgstr "Englisch"
 
@@ -131,6 +131,10 @@ msgstr "E-Mail"
 #: christophroyer/templates/commissions.html:25
 msgid "Send"
 msgstr "Senden"
+
+#: christophroyer/templates/commissions.html:33
+msgid "Sending mail, please wait..."
+msgstr "Mail wird gesendet, bitte warten..."
 
 #: christophroyer/templates/index.html:10
 msgid ""
@@ -221,6 +225,26 @@ msgstr ""
 "        </p>\n"
 "    "
 
+#: christophroyer/templates/mail_commission.html:28 christophroyer/views.py:43
+msgid "Project request"
+msgstr "Projektanfragen"
+
+#: christophroyer/templates/mail_commission.html:31 christophroyer/views.py:45
+msgid "proposed the following project:"
+msgstr "stellt folgendes Projekt vor:"
+
+#: christophroyer/templates/mail_commission.html:35
+msgid "This message was sent from"
+msgstr "Diese Nachricht wurde gesendet von"
+
+#: christophroyer/templates/mail_commission.html:36
+msgid "If you didn't use this website, tell me via E-Mail"
+msgstr "Falls Sie diese Website nicht benutzt haben, teilen sie es mir per Mail mit"
+
+#: christophroyer/templates/mail_commission.html:37
+msgid "and i will discard your information"
+msgstr "und ich werde ihre Kontaktinformationen verwerfen"
+
 #: christophroyer/templates/privacy.html:9
 msgid "Website use"
 msgstr "Nutzung der Website"
@@ -243,6 +267,12 @@ msgid ""
 "        (and to the given mail address if you so wish).\n"
 "    "
 msgstr ""
+"\n"
+"Mit der Benutzung des Auftragsformulars stimmen Sie zu, dass ihre Daten"
+"dementsprechend gehandhabt werden.\n"
+"In der Datenbank wird nichts gespeichert, es wird aber eine E-Mail mit den angegebenen Kontaktinformationen"
+"and mail@christophroyer (und gegebenenfalls an die angegebene Adresse) gesendet.\n"
+"   "
 
 #: christophroyer/templates/projects.html:15
 msgid "Image"
@@ -252,15 +282,24 @@ msgstr "Bild"
 msgid "Read more..."
 msgstr "Mehr..."
 
-#: christophroyer/views.py:42
+#: christophroyer/views.py:48
+msgid ""
+"This message was sent from christophroyer.com - If you didn't use this "
+"website, tell me via E-Mail (mail@christophroyer.com) and I will discard "
+"your information"
+msgstr ""
+"Diese Nachricht wurde von christophroyer.com versendet - Wenn Sie diese Website nicht benutzt haben,"
+"teilen Sie mir dies per E-Mail (mail@christophroyer.com) mit, und ich werde Ihre Kontaktinformation verwerfen."
+
+#: christophroyer/views.py:74
 msgid "Error while sending mail, please try again later"
 msgstr "Fehler beim senden der Mail, bitte versuchen sie es später nochmal"
 
-#: christophroyer/views.py:44
+#: christophroyer/views.py:76
 msgid "Your request was sent - I'll get in touch soon!"
 msgstr "Ihre Anfrage wurde gesendet - Ich melde mich bald!"
 
-#: christophroyer/views.py:46
+#: christophroyer/views.py:78
 msgid "Invalid data - please check your inputs for errors"
 msgstr "Ungültige Angaben - Bitte überprüfen Sie Ihre Eingaben auf Fehler"
 
