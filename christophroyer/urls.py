@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', v.index, name='index'),
 
-    path('i18n/', include('django.conf.urls.i18n'), name='set_language')
+    path('i18n/', include('django.conf.urls.i18n'), name='set_language'),
+    path('kurz/', include(('kurz.urls', 'kurz'), namespace='kurz')),
 ]
 
 urlpatterns += i18n_patterns(
