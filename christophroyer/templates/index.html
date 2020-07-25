@@ -7,30 +7,41 @@
 {% endblock %}
 
 {% block content %}
-    {% blocktrans %}
-        <h1>Hi, I'm Christoph Royer.</h1>
-        <p>I'm a self-taught programmer, making whatever comes to mind with whatever platform works best.<br>
-            Tell the world about myself - make a website. Shoot nerf darts -
-            make an autonomous turret with face recognition. Don't want to get up to turn off the lights - bolt a servo
-            to the wall and make a phone app. Go wild.
+        <p>
+            {% blocktrans %}
+            I'm a self-taught programmer with a focus on individually made websites for you and your business.<br>
+            Whether you only want a small page to tell the online world that you exist, or you want your whole
+            booking system online, including a personal phone app - or anywhere in between - I have you covered.<br>
+            I will help you decide what solution is best for you and develop it according to your ideas.
+            {% endblocktrans %}
         </p>
-        <h3>Don't settle for the known.</h3>
-        <p>In a digital world, everything can be copied exactly without effort, which is why it's important to me to
-            keep improving, reiterating and reimagining. How would we stand out after all if all we do is copy others?<br>
-            Because of this, each of my projects is built individually for its purpose - giving it its own character and feel.
+        <h3>{% trans "Don't settle for the known." %}</h3>
+        <p>
+            {% blocktrans %}
+            Nowadays, everything can - and is - copied from others, which is why it's important to me to
+            keep improving, reiterating and reimagining. How would we stand out after all if everything has to look the same?<br>
+            Because of this, I create each project with its own style and feel, to make it uniquely yours.
+            {% endblocktrans %}
         </p>
-        <h3>About me</h3>
-    {% endblocktrans %}
+        <h3>{% trans "About me" %}</h3>
         <img src="{% static "img/profile.jpg" %}" alt="{% trans "Profile image" %}" id="profilePhoto">
-    {% blocktrans %}
-        <p>I'm currently 19 years old, living in Ramsau, Austria. I'm completing my civil service as a paramedic
-        in Schladming, while taking freelance work as a programmer in my free time. Afterwards, I will enroll
-        at university for a formal IT/computer science education.</p>
-        <p>While studying at Highschool in Radstadt, I started to teach myself how to code. After my first year coding in
-        C#,and getting to know the principles of programming, I moved over to Python, which is my main strength until this
-        day. But through my various projects involving many different environments I do have a wider base of
-        knowledge: from Arduino's C to the "big three" of web development - JavaScript, Html and CSS - and even a bit of
-        App development, among bits and pieces from other frameworks.
+        <p>
+            {% blocktrans %}
+            I'm currently 19 years old, living in Ramsau, Austria. After spending the summer developing software
+            and taking freelance work, I will start studying Computer science in Graz.</p>
+            {% endblocktrans %}
+        <p>
+            {% blocktrans %}
+            Everything I know about Software by now is self-taught through online sources: while studying
+            at Highschool in Radstadt, I started taking an interest in software development. After my first year coding in
+            <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/" target="_blank">C#</a>,
+            and getting to know the principles of programming, I moved over to
+            <a href="https://python.org" target="_blank">Python</a>, which is my main strength to this
+            day. But through my various projects involving many different environments I do have a wider base of
+            knowledge: from <a href="https://arduino.cc" target="_blank">Arduino</a>'s C to the "big three"
+            of web development - JavaScript, Html and CSS - but also
+            App development with <a href="https://flutter.dev" target="_blank">Flutter</a>, among bits and pieces
+            from other frameworks.
+            {% endblocktrans %}
         </p>
-    {% endblocktrans %}
 {% endblock %}

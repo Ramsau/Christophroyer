@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-20 08:53+0000\n"
+"POT-Creation-Date: 2020-07-25 08:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,34 +55,35 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: christophroyer/templates/base.html:73
+#: christophroyer/templates/base.html:83
 msgid "Start"
 msgstr ""
 
-#: christophroyer/templates/base.html:76
+#: christophroyer/templates/base.html:86
 #: christophroyer/templates/projects.html:6 christophroyer/urls.py:32
 msgid "Projects"
 msgstr ""
 
-#: christophroyer/templates/base.html:79
-#: christophroyer/templates/commissions.html:5 christophroyer/urls.py:33
+#: christophroyer/templates/base.html:89
+#: christophroyer/templates/commissions.html:6
+#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:33
 msgid "Commissions"
 msgstr ""
 
-#: christophroyer/templates/base.html:89
+#: christophroyer/templates/base.html:99
 #: christophroyer/templates/privacy.html:5 christophroyer/urls.py:31
 msgid "Privacy"
 msgstr ""
 
-#: christophroyer/templates/base.html:90
+#: christophroyer/templates/base.html:100
 msgid "Then you will know the truth, and the truth will set you free."
 msgstr ""
 
-#: christophroyer/templates/base.html:90
+#: christophroyer/templates/base.html:100
 msgid "John 8:32"
 msgstr ""
 
-#: christophroyer/templates/commissions.html:6
+#: christophroyer/templates/commissions.html:11
 msgid ""
 "\n"
 "        <p>\n"
@@ -104,65 +105,88 @@ msgid ""
 "    "
 msgstr ""
 
-#: christophroyer/templates/commissions.html:19
+#: christophroyer/templates/commissions.html:24
 msgid "Mail"
 msgstr ""
 
-#: christophroyer/templates/commissions.html:25
+#: christophroyer/templates/commissions.html:30
 msgid "Send"
 msgstr ""
 
-#: christophroyer/templates/commissions.html:33
+#: christophroyer/templates/commissions.html:38
 msgid "Sending mail, please wait..."
 msgstr ""
 
-#: christophroyer/templates/index.html:10
+#: christophroyer/templates/index.html:11
 msgid ""
 "\n"
-"        <h1>Hi, I'm Christoph Royer.</h1>\n"
-"        <p>I'm a self-taught programmer, making whatever comes to mind with "
-"whatever platform works best.<br>\n"
-"            Tell the world about myself - make a website. Shoot nerf darts "
-"-\n"
-"            make an autonomous turret with face recognition. Don't want to "
-"get up to turn off the lights - bolt a servo\n"
-"            to the wall and make a phone app. Go wild.\n"
-"        </p>\n"
-"        <h3>Don't settle for the known.</h3>\n"
-"        <p>In a digital world, everything can be copied exactly without "
-"effort, which is why it's important to me to\n"
-"            keep improving, reiterating and reimagining. How would we stand "
-"out after all if all we do is copy others?<br>\n"
-"            Because of this, each of my projects is built individually for "
-"its purpose - giving it its own character and feel.\n"
-"        </p>\n"
-"        <h3>About me</h3>\n"
-"    "
+"            I'm a self-taught programmer with a focus on individually made "
+"websites for you and your business.<br>\n"
+"            Whether you only want a small page to tell the online world that "
+"you exist, or you want your whole\n"
+"            booking system online, including a personal phone app - or "
+"anywhere in between - I have you covered.<br>\n"
+"            I will help you decide what solution is best for you and develop "
+"it according to your ideas.\n"
+"            "
 msgstr ""
 
-#: christophroyer/templates/index.html:24
+#: christophroyer/templates/index.html:18
+msgid "Don't settle for the known."
+msgstr ""
+
+#: christophroyer/templates/index.html:20
+msgid ""
+"\n"
+"            Nowadays, everything can - and is - copied from others, which is "
+"why it's important to me to\n"
+"            keep improving, reiterating and reimagining. How would we stand "
+"out after all if everything has to look the same?<br>\n"
+"            Because of this, I create each project with its own style and "
+"feel, to make it uniquely yours.\n"
+"            "
+msgstr ""
+
+#: christophroyer/templates/index.html:26
+msgid "About me"
+msgstr ""
+
+#: christophroyer/templates/index.html:27
 msgid "Profile image"
 msgstr ""
 
-#: christophroyer/templates/index.html:25
+#: christophroyer/templates/index.html:29
 msgid ""
 "\n"
-"        <p>I'm currently 19 years old, living in Ramsau, Austria. I'm "
-"completing my civil service as a paramedic\n"
-"        in Schladming, while taking freelance work as a programmer in my "
-"free time. Afterwards, I will enroll\n"
-"        at university for a formal IT/computer science education.</p>\n"
-"        <p>While studying at Highschool in Radstadt, I started to teach "
-"myself how to code. After my first year coding in\n"
-"        C#,and getting to know the principles of programming, I moved over "
-"to Python, which is my main strength until this\n"
-"        day. But through my various projects involving many different "
+"            I'm currently 19 years old, living in Ramsau, Austria. After "
+"spending the summer developing software\n"
+"            and taking freelance work, I will start studying Computer "
+"science in Graz.</p>\n"
+"            "
+msgstr ""
+
+#: christophroyer/templates/index.html:34
+msgid ""
+"\n"
+"            Everything I know about Software by now is self-taught through "
+"online sources: while studying\n"
+"            at Highschool in Radstadt, I started taking an interest in "
+"software development. After my first year coding in\n"
+"            <a href=\"https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-"
+"csharp/\" target=\"_blank\">C#</a>,\n"
+"            and getting to know the principles of programming, I moved over "
+"to\n"
+"            <a href=\"https://python.org\" target=\"_blank\">Python</a>, "
+"which is my main strength to this\n"
+"            day. But through my various projects involving many different "
 "environments I do have a wider base of\n"
-"        knowledge: from Arduino's C to the \"big three\" of web development "
-"- JavaScript, Html and CSS - and even a bit of\n"
-"        App development, among bits and pieces from other frameworks.\n"
-"        </p>\n"
-"    "
+"            knowledge: from <a href=\"https://arduino.cc\" target=\"_blank"
+"\">Arduino</a>'s C to the \"big three\"\n"
+"            of web development - JavaScript, Html and CSS - but also\n"
+"            App development with <a href=\"https://flutter.dev\" target="
+"\"_blank\">Flutter</a>, among bits and pieces\n"
+"            from other frameworks.\n"
+"            "
 msgstr ""
 
 #: christophroyer/templates/mail_commission.html:28 christophroyer/views.py:43
@@ -186,18 +210,10 @@ msgid "and i will discard your information"
 msgstr ""
 
 #: christophroyer/templates/privacy.html:9
-msgid "Website use"
-msgstr ""
-
-#: christophroyer/templates/privacy.html:10
-msgid "I'm not tracking or storing anything at the moment."
-msgstr ""
-
-#: christophroyer/templates/privacy.html:11
 msgid "Commission requests"
 msgstr ""
 
-#: christophroyer/templates/privacy.html:12
+#: christophroyer/templates/privacy.html:10
 msgid ""
 "\n"
 "        When using the request form, you agree that your data will be "
@@ -206,6 +222,76 @@ msgid ""
 "information will be sent to mail@christophroyer.com\n"
 "        (and to the given mail address if you so wish).\n"
 "    "
+msgstr ""
+
+#: christophroyer/templates/privacy.html:15
+msgid "Website use"
+msgstr ""
+
+#: christophroyer/templates/privacy.html:17
+msgid ""
+"\n"
+"        This site uses Google Analytics to analyse the Website use. The data "
+"generated by this is used,\n"
+"        to optimise the website and advertising activities.<br>\n"
+"        Google Analytics is a web analysis service provided by Google Inc. "
+"(1600 Amphitheatre Parkway,\n"
+"        Mountain View, CA 94043, United States). Google processes the data "
+"concerning website use\n"
+"        according to my commission and is committed by contract to take "
+"measures to make sure the data are\n"
+"        stored and handled responsibly. <br>\n"
+"        These data points, among others, may be tracked:\n"
+"        "
+msgstr ""
+
+#: christophroyer/templates/privacy.html:27
+msgid "Visited pages"
+msgstr ""
+
+#: christophroyer/templates/privacy.html:28
+msgid "Your behaviour (e.g clicks, scrolling behaviour, time spent)"
+msgstr ""
+
+#: christophroyer/templates/privacy.html:29
+msgid "Your approximate location (City and State)"
+msgstr ""
+
+#: christophroyer/templates/privacy.html:30
+msgid "Your IP-Address (in shortened form, no possibility of direct relation)"
+msgstr ""
+
+#: christophroyer/templates/privacy.html:31
+msgid "Technical informations (browser, device, resolution)"
+msgstr ""
+
+#: christophroyer/templates/privacy.html:32
+msgid "From where you came onto this page"
+msgstr ""
+
+#: christophroyer/templates/privacy.html:35
+msgid ""
+"\n"
+"            This data is transferred to a Google Server in the USA. Google "
+"hereby complies with the\n"
+"            privacy laws of the \"EU-US Privacy Shield\" treaty. <br>\n"
+"            Google analytics stores Cookies on your Webbrowser for a "
+"duration of two years after your last visit.\n"
+"            These Cookies contain a randomly generated User-ID, with which "
+"you can be recognised in future\n"
+"            website visits. <br>\n"
+"            The tracked data are stored together with this random User-ID, "
+"which makes the analysis of this\n"
+"            pseudonymised data posssible. This user-related data is "
+"automatically deleted after 14 months.\n"
+"            Other data stays stored in aggregated form for an unlimited "
+"duration. <br>\n"
+"            Should you not agree to the storage as explained above, you can "
+"install\n"
+"            <a href=\"https://tools.google.com/dlpage/gaoptout?hl=de\" "
+"target=\"_blank\">this Browser Add-On to deactivate\n"
+"                Google Analytics</a>.\n"
+"            "
 msgstr ""
 
 #: christophroyer/templates/projects.html:15
