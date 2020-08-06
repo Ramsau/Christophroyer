@@ -4,7 +4,9 @@ function updateCharCount() {
 
 let kurz_submitUrl;
 let kurz_csrftoken;
+let kurz_processingText;
 function submitText(text) {
+    showInfo(kurz_processingText);
     $.ajax({
         url: kurz_submitUrl,
         method: 'POST',
@@ -14,7 +16,7 @@ function submitText(text) {
         },
         success: (data) => {
             showSuccess(data);
-            $('#kurz_video').attr('src', '/kurz/video/' + data)[0].load();
+            $('#kurz_video').attr('src', 'video/' + data)[0].load();
         },
         error: () => {
             showError('Nay');

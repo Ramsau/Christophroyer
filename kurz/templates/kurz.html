@@ -28,5 +28,6 @@
     <script>
         kurz_submitUrl = '{% url 'kurz:requestVideo' %}';
         kurz_csrftoken = '{{ csrf_token }}';
+        kurz_processingText = '{% trans "Processing video - Please stay on this page" %}';
     </script>
 {% endblock %}
