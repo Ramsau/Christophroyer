@@ -20,44 +20,32 @@ def requestVideo(request):
     return HttpResponse(vid, status=200)
 
 def createSnippets(request):
-    if request.method == 'GET':
-        for (dirpath, dirnames, filenames) in os.walk(settings.KURZ_WORDS):
-            filenames = filenames
-            break
+    newWordSource = '/home/christoph/Documents/christophroyer/Kurz/words'
+    files = []
+    for (dirpath, dirnames, filenames) in os.walk(newWordSource):
+        files = filenames
+        break
 
-        filename = [f for f in filenames if '-' in f][0]
+    files = [file for file in files if not os.path.exists(os.path.join(settings.KURZ_WORDS, file))]
+    if request.method == 'GET':
+        filename = files[0]
         return render(request, 'createSnippets.html', {'filename': filename})
     else:
-        old_filename = request.POST.get('old_filename')
-        new_filename = request.POST.get('new_filename')
+        filename = request.POST.get('filename')
+        keep = request.POST.get('keep')
 
-        if not request.POST.get('pick'):
-            print(old_filename, new_filename)
-
-            if not os.path.exists(os.path.join(settings.KURZ_WORDS, new_filename)):
-                os.rename(
-                    os.path.join(settings.KURZ_WORDS, old_filename),
-                    os.path.join(settings.KURZ_WORDS, new_filename),
-                )
-            else:
-                return HttpResponse('?%s|%s' % (old_filename, new_filename), status=200)
+        if keep == 'false':
+            print('deleting ' + filename)
+            os.remove(os.path.join(newWordSource, filename))
         else:
-            pick = request.POST.get('pick')
+            print('keeping ' + filename)
+            os.rename(
+                os.path.join(newWordSource, filename),
+                os.path.join(settings.KURZ_WORDS, filename)
+            )
 
-            if pick == 'new':
-                print('overwriting %s with %s' % (old_filename, new_filename))
-                os.rename(
-                    os.path.join(settings.KURZ_WORDS, new_filename),
-                    os.path.join(settings.KURZ_WORDS, old_filename),
-                )
-            else:
-                print('deleting %s, leaving %s' % (new_filename, old_filename))
-                os.remove(os.path.join(settings.KURZ_WORDS, new_filename))
+        files.remove(filename)
+        print('%d files left' % len(files))
 
-        for (dirpath, dirnames, filenames) in os.walk(settings.KURZ_WORDS):
-            filenames = filenames
-            break
-
-        filename = [f for f in filenames if '-' in f][0]
-
-        return HttpResponse(filename, status=200)
+        new_filename = files[0]
+        return HttpResponse(new_filename)

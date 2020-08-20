@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-25 08:48+0000\n"
+"POT-Creation-Date: 2020-08-20 13:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,11 +47,11 @@ msgstr "Kopie an mich senden"
 msgid "I agree with the <a href=\"{0}\">Terms of service</a>*"
 msgstr "Ich stimme den <a href=\"{0}\">Nutzungsbestimmungen</a> zu*"
 
-#: christophroyer/settings.py:122
+#: christophroyer/settings.py:123
 msgid "German"
 msgstr "Deutsch"
 
-#: christophroyer/settings.py:123
+#: christophroyer/settings.py:124
 msgid "English"
 msgstr "Englisch"
 
@@ -60,18 +60,18 @@ msgid "Start"
 msgstr ""
 
 #: christophroyer/templates/base.html:86
-#: christophroyer/templates/projects.html:6 christophroyer/urls.py:32
+#: christophroyer/templates/projects.html:6 christophroyer/urls.py:33
 msgid "Projects"
 msgstr "Projekte"
 
 #: christophroyer/templates/base.html:89
 #: christophroyer/templates/commissions.html:6
-#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:33
+#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:34
 msgid "Commissions"
 msgstr "Aufträge"
 
 #: christophroyer/templates/base.html:99
-#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:31
+#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:32
 msgid "Privacy"
 msgstr "Datenschutz"
 
@@ -347,7 +347,7 @@ msgstr ""
 msgid "From where you came onto this page"
 msgstr "Herkunftsquelle Ihres Besuchs"
 
-#: christophroyer/templates/privacy.html:35"
+#: christophroyer/templates/privacy.html:35
 msgid ""
 "\n"
 "            This data is transferred to a Google Server in the USA. Google "
@@ -417,6 +417,34 @@ msgstr "Ihre Anfrage wurde gesendet - Ich melde mich bald!"
 #: christophroyer/views.py:78
 msgid "Invalid data - please check your inputs for errors"
 msgstr "Ungültige Angaben - Bitte überprüfen Sie Ihre Eingaben auf Fehler"
+
+#: kurz/templates/kurz.html:10
+msgid "Chancellor Kurz says what you tell him to"
+msgstr "Kanzler Kurz sagt, was du ihm aufträgst"
+
+#: kurz/templates/kurz.html:16
+msgid "characters remaining"
+msgstr "Zeichen übrig"
+
+#: kurz/templates/kurz.html:18
+msgid "Talk!"
+msgstr "Sprich!"
+
+#: kurz/templates/kurz.html:32
+msgid "Processing video - Please stay on this page"
+msgstr "Video wird verarbeitet - Bitte auf dieser Seite bleiben"
+
+#: kurz/templates/kurz.html:33
+msgid "Your video is ready"
+msgstr "Dein Video ist bereit"
+
+#: kurz/templates/kurz.html:34
+msgid "Error while processing your video - Please try again"
+msgstr "Fehler beim Verarbeiten des Videos, versuch es nochmal"
+
+#: kurz/views.py:15
+msgid "Method forbidden"
+msgstr "Methode nicht erlaubt"
 
 #~ msgid "I'm not tracking or storing anything at the moment."
 #~ msgstr "Ich analysiere oder speichere zur Zeit gar nichts."

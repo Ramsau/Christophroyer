@@ -12,5 +12,6 @@ urlpatterns = [
 
 urlpatterns += static('video/', document_root=settings.KURZ_CLIPS)
 urlpatterns += static('words/', document_root=settings.KURZ_WORDS)
+urlpatterns += static('new-words/', document_root='/home/christoph/Documents/christophroyer/Kurz/words')
 
 

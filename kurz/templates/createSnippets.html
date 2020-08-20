@@ -3,9 +3,9 @@
 
 {% block content %}
     <div style="display: flex; flex-direction: row;">
-            <video src="/kurz/words/{{ filename }}"
+            <video src="/kurz/new-words/{{ filename }}"
                    controls="controls" id="video1"></video>
-            <video src="/kurz/words/{{ filename }}"
+            <video src="/kurz/new-words/{{ filename }}"
                    controls="controls" id="video2"></video>
     </div>
     <div style="width: 100%">
@@ -13,8 +13,8 @@
             <input type="text" id="text" type="submit" autocomplete="off">
             <button>Submit</button>
         </form>
-        <button style="float: right" onclick="pick('old')">Pick old</button>
-        <button style="float: right" onclick="pick('new')">Pick new</button>
+        <button style="float: right" onclick="pick('false')">delete</button>
+        <button style="float: right" onclick="pick('true')">Keep</button>
     </div>
 
     <script>
@@ -63,9 +63,8 @@
                 url: '{% url 'kurz:createSnippets' %}',
                 data: {
                     csrfmiddlewaretoken: '{{ csrf_token }}',
-                    pick: side,
-                    new_filename: $('#video1').attr('src').split('/').slice(-1).pop(),
-                    old_filename: $('#video2').attr('src').split('/').slice(-1).pop(),
+                    keep: side,
+                    filename: $('#video1').attr('src').split('/').slice(-1).pop(),
                 },
                 error: (response) => {
                     showError(response.responseText);
@@ -85,7 +84,7 @@
                         init_filename = response;
                         $('#text').val('');
                         $('#text').focus();
-                        $('#video1').attr('src', '/kurz/words/' + response)[0].load();
+                        $('#video1').attr('src', '/kurz/new-words/' + response)[0].load();
                         loadText();
                         $('#video1')[0].play();
                     }
@@ -95,10 +94,10 @@
 
         $(document).keyup(function(event){
             if (event.originalEvent.key === 'ArrowDown' || event.originalEvent.key === 'ArrowRight'){
-                pick('old');
+                pick('false');
             }
             else if (event.originalEvent.key === 'ArrowLeft') {
-                pick('new');
+                pick('true');
             }
         })
 

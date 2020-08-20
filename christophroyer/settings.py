@@ -151,6 +151,7 @@ KURZ_WORDS = os.path.join(KURZ_SNIPPETS_BASE, 'words')
 KURZ_PHONEMES = os.path.join(KURZ_SNIPPETS_BASE, 'phonemes')
 KURZ_CLIPS = os.path.join(MEDIA_ROOT, 'kurz')
 KURZ_MAX_CACHE = 60  # in seconds
+KURZ_ENABLE_CACHE = True
 
 
 try:

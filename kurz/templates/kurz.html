@@ -3,21 +3,22 @@
 {% load static %}
 
 {% block title %}
-    Kurz - Christoph Royer
+    Kurz Spricht
 {% endblock %}
 
 {% block content %}
-    <h1>Red mal mit mir Kurz</h1>
+    <h1>{% trans "Chancellor Kurz says what you tell him to" %}</h1>
     <div id="kurz-video-container">
         <div>
-            <textarea name="" id="kurz_text" cols="30" rows="10" maxlength="255" onkeyup="updateCharCount()"></textarea>
+            <textarea name="" id="kurz_text" cols="30" rows="10" maxlength="255" onkeyup="updateCharCount()">Bayern gehört immer schon zu Österreich - jetzt ist der Zeitpunkt der Heimholung gekommen
+            </textarea>
             <span>
                 <span id="chars_remaining">255</span>/255 {% trans "characters remaining" %}
                 <button class="button primary button" onclick="submitText($('#kurz_text').val())">
                     {% trans "Talk!" %}
                 </button>
             </span>
-            <video src="http://talkobamato.me/synth/output/498f5258578a929bc7b95570fb79d812/obama.mp4"
+            <video src="video/greeting.mp4"
                    controls="controls" id="kurz_video"></video>
         </div>
     </div>
@@ -29,5 +30,7 @@
         kurz_submitUrl = '{% url 'kurz:requestVideo' %}';
         kurz_csrftoken = '{{ csrf_token }}';
         kurz_processingText = '{% trans "Processing video - Please stay on this page" %}';
+        kurz_success = '{% trans "Your video is ready" %}';
+        kurz_error = '{% trans "Error while processing your video - Please try again" %}';
     </script>
 {% endblock %}

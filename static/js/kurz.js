@@ -15,11 +15,11 @@ function submitText(text) {
             csrfmiddlewaretoken: kurz_csrftoken,
         },
         success: (data) => {
-            showSuccess(data);
+            showSuccess(kurz_success);
             $('#kurz_video').attr('src', 'video/' + data)[0].load();
         },
         error: () => {
-            showError('Nay');
+            showError(kurz_error);
         }
     });
 }
