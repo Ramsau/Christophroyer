@@ -6,9 +6,17 @@ from django.conf import settings
 import os
 
 from .video import createVideo
+from .models import Clip
 
 def main(request):
-    return render(request, 'kurz.html')
+    # get clip from url parameter
+    vid = request.GET.get('vid')
+    try:
+        clip = Clip.objects.get(id=vid.split('.')[0])
+    except (Clip.DoesNotExist, AttributeError):
+        clip = None
+
+    return render(request, 'kurz.html', {'clip': clip})
 
 def requestVideo(request):
     if request.method != 'POST':

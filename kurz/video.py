@@ -72,8 +72,8 @@ def createVideo(text):
                 )
 
 
-        if len(videoFileClips) == 0 and False:
-            emptyVidPath = os.path.join(settings.KURZ_WORDS, '_.mp4')
+        if len(videoFileClips) == 0:
+            emptyVidPath = os.path.join(settings.KURZ_PHONEMES, '_.mp4')
             if os.path.exists(emptyVidPath):
                 videoFileClips.append(VideoFileClip(emptyVidPath))
 

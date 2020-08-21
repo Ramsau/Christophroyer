@@ -2,35 +2,98 @@
 {% load i18n %}
 {% load static %}
 
+{% block additional_head %}
+    <script data-ad-client="ca-pub-5642550515510804" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- Primary Meta Tags -->
+    <title>Kurz Spricht</title>
+    <meta name="title" content="Kurz Spricht">
+    <meta name="description" content="{% if clip %}{% trans "Quote from Chancellor Kurz" %}: '{{ clip.text }}'{% else %}{% trans "Sebastian Short gives you a personal speech" %}{% endif %}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kurzspricht.at/">
+    <meta property="og:title" content="Kurz Spricht">
+    <meta property="og:description" content="{% if clip %}{% trans "Quote from Chancellor Kurz" %}: '{{ clip.text }}'{% else %}{% trans "Sebastian Short gives you a personal speech" %}{% endif %}">
+    <meta property="og:image" content="{% static "img/kurz-meta-img.jpg" %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kurzspricht.at/">
+    <meta property="twitter:title" content="Kurz Spricht">
+    <meta property="twitter:description" content="{% if clip %}{% trans "Quote from Chancellor Kurz" %}: '{{ clip.text }}'{% else %}{% trans "Sebastian Short gives you a personal speech" %}{% endif %}">
+    <meta property="twitter:image" content="{% static "img/kurz-meta-img.jpg" %}">
+
+{% endblock %}
+
 {% block title %}
     Kurz Spricht
 {% endblock %}
 
-{% block content %}
+{% block content %}<div id="fb-root"></div>
     <h1>{% trans "Chancellor Kurz says what you tell him to" %}</h1>
     <div id="kurz-video-container">
         <div>
-            <textarea name="" id="kurz_text" cols="30" rows="10" maxlength="255" onkeyup="updateCharCount()">Bayern gehört immer schon zu Österreich - jetzt ist der Zeitpunkt der Heimholung gekommen
-            </textarea>
+            <video src="video/{% if clip %}{{ clip.id }}{% else %}greeting{% endif %}.mp4"
+                   controls="controls"
+                   id="kurz_video"></video>
+            <textarea name="" id="kurz_text" cols="30" rows="6" maxlength="255" onkeyup="updateCharCount()">{% if clip %}{{ clip.text }}{% else %}Bayern gehört immer schon zu Österreich - jetzt ist der Zeitpunkt der Heimholung gekommen{% endif %}</textarea>
             <span>
                 <span id="chars_remaining">255</span>/255 {% trans "characters remaining" %}
+
+                <button class="button" onclick="$('#shareDropdown').dropdown('toggle')">
+                    <i class="share alternate icon"></i> {% trans "Share" %}
+
+                    <div class="ui floating dropdown" id="shareDropdown">
+                      <div class="menu transition hidden">
+                        <a class="item" onclick="share(event, 'copy')" id="share_clipboard">
+                            <i class="clipboard icon"></i> {% trans "Copy link" %}
+                        </a>
+                        <a class="item" onclick="share(event, 'facebook')"
+                           target="_blank" id="share_facebook"
+                             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkurzspricht.at%2F{% if clip %}%3Fvid%3D{{ clip.id }}.mp4{% endif %}&amp;src=sdkpreparse">
+                            <i class="facebook f icon"></i> Facebook
+                        </a>
+                        <a class="item" onclick="share(event, 'tumblr')"
+                           href="http://www.tumblr.com/share/link?url=https%3A%2F%2Fkurzspricht.at%2f{% if clip %}%3Fvid%3D{{ clip.id }}.mp4{% endif %}"
+                           target="blank_" id="share_tumblr">
+                            <i class="tumblr icon"></i> Tumblr
+                        </a>
+                        <a class="item" onclick="share(event, 'twitter')"
+                            href="https://twitter.com/intent/tweet?text=kurzspricht.at:&url=https://kurzspricht.at/{% if clip %}%3Fvid%3D{{ clip.id }}.mp4{% endif %}"
+                            target="_blank" id="share_twitter">
+                            <i class="twitter icon"></i> Twitter
+                        </a>
+                      </div>
+                    </div>
+                </button>
                 <button class="button primary button" onclick="submitText($('#kurz_text').val())">
                     {% trans "Talk!" %}
                 </button>
             </span>
-            <video src="video/greeting.mp4"
-                   controls="controls" id="kurz_video"></video>
         </div>
     </div>
 {% endblock %}
 
 {% block js %}
     <script src="{% static 'js/kurz.js' %}"></script>
+    <script src="{% static 'js/share.js' %}"></script>
     <script>
         kurz_submitUrl = '{% url 'kurz:requestVideo' %}';
         kurz_csrftoken = '{{ csrf_token }}';
         kurz_processingText = '{% trans "Processing video - Please stay on this page" %}';
         kurz_success = '{% trans "Your video is ready" %}';
         kurz_error = '{% trans "Error while processing your video - Please try again" %}';
+
+        share_clipboard = '{% trans "The video link was copied to your clipboard" %}';
+        share_link = document.location.href;
+
+        $('.ui.dropdown').dropdown({
+            direction: 'upward',
+        });
+
+        $('#kurz_video').on('error', function(error){
+            submitText('{% if clip %}{{ clip.text }}{% else %}Bayern gehört immer schon zu Österreich - jetzt ist der Zeitpunkt der Heimholung gekommen{% endif %}');
+        })
     </script>
 {% endblock %}

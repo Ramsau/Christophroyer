@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 13:52+0000\n"
+"POT-Creation-Date: 2020-08-21 15:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,32 +55,32 @@ msgstr "Deutsch"
 msgid "English"
 msgstr "Englisch"
 
-#: christophroyer/templates/base.html:83
+#: christophroyer/templates/base.html:86
 msgid "Start"
 msgstr ""
 
-#: christophroyer/templates/base.html:86
+#: christophroyer/templates/base.html:89
 #: christophroyer/templates/projects.html:6 christophroyer/urls.py:33
 msgid "Projects"
 msgstr "Projekte"
 
-#: christophroyer/templates/base.html:89
+#: christophroyer/templates/base.html:92
 #: christophroyer/templates/commissions.html:6
 #: christophroyer/templates/commissions.html:10 christophroyer/urls.py:34
 msgid "Commissions"
 msgstr "Aufträge"
 
-#: christophroyer/templates/base.html:99
+#: christophroyer/templates/base.html:102
 #: christophroyer/templates/privacy.html:5 christophroyer/urls.py:32
 msgid "Privacy"
 msgstr "Datenschutz"
 
-#: christophroyer/templates/base.html:100
+#: christophroyer/templates/base.html:103
 msgid "Then you will know the truth, and the truth will set you free."
 msgstr ""
 "Und ihr werdet die Wahrheit erkennen, und die Wahrheit wird euch frei machen."
 
-#: christophroyer/templates/base.html:100
+#: christophroyer/templates/base.html:103
 msgid "John 8:32"
 msgstr "Joh 8:32"
 
@@ -418,31 +418,53 @@ msgstr "Ihre Anfrage wurde gesendet - Ich melde mich bald!"
 msgid "Invalid data - please check your inputs for errors"
 msgstr "Ungültige Angaben - Bitte überprüfen Sie Ihre Eingaben auf Fehler"
 
-#: kurz/templates/kurz.html:10
+#: kurz/templates/kurz.html:11 kurz/templates/kurz.html:17
+#: kurz/templates/kurz.html:24
+msgid "Quote from Chancellor Kurz"
+msgstr "Zitat Kanzler Kurz"
+
+#: kurz/templates/kurz.html:11 kurz/templates/kurz.html:17
+#: kurz/templates/kurz.html:24
+msgid "Sebastian Short gives you a personal speech"
+msgstr "Unser Bundesbasti sagt, was du ihm vorschreibst"
+
+#: kurz/templates/kurz.html:34
 msgid "Chancellor Kurz says what you tell him to"
 msgstr "Kanzler Kurz sagt, was du ihm aufträgst"
 
-#: kurz/templates/kurz.html:16
+#: kurz/templates/kurz.html:42
 msgid "characters remaining"
 msgstr "Zeichen übrig"
 
-#: kurz/templates/kurz.html:18
+#: kurz/templates/kurz.html:45
+msgid "Share"
+msgstr "Teilen"
+
+#: kurz/templates/kurz.html:50
+msgid "Copy link"
+msgstr "Link kopieren"
+
+#: kurz/templates/kurz.html:71
 msgid "Talk!"
 msgstr "Sprich!"
 
-#: kurz/templates/kurz.html:32
+#: kurz/templates/kurz.html:84
 msgid "Processing video - Please stay on this page"
 msgstr "Video wird verarbeitet - Bitte auf dieser Seite bleiben"
 
-#: kurz/templates/kurz.html:33
+#: kurz/templates/kurz.html:85
 msgid "Your video is ready"
 msgstr "Dein Video ist bereit"
 
-#: kurz/templates/kurz.html:34
+#: kurz/templates/kurz.html:86
 msgid "Error while processing your video - Please try again"
 msgstr "Fehler beim Verarbeiten des Videos, versuch es nochmal"
 
-#: kurz/views.py:15
+#: kurz/templates/kurz.html:88
+msgid "The video link was copied to your clipboard"
+msgstr "Der Videolink wurde in die Zwischenablage kopiert"
+
+#: kurz/views.py:23
 msgid "Method forbidden"
 msgstr "Methode nicht erlaubt"
 
