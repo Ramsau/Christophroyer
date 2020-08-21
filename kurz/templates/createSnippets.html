@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div style="display: flex; flex-direction: row;">
+            <video src="/kurz/new-words/{{ filename }}"
+                   controls="controls" id="video1"></video>
+            <video src="/kurz/new-words/{{ filename }}"
+                   controls="controls" id="video2"></video>
+    </div>
+    <div style="width: 100%">
+        <form id="snippetForm">
+            <input type="text" id="text" type="submit" autocomplete="off">
+            <button>Submit</button>
+        </form>
+        <button style="float: right" onclick="pick('false')">delete</button>
+        <button style="float: right" onclick="pick('true')">Keep</button>
+    </div>
+
+    <script>
+        let init_filename = '{{ filename }}';
+        $('#snippetForm').submit(function(e) {
+            e.preventDefault();
+            let new_filename = $('#text').val();
+
+            $.ajax({
+                method: 'POST',
+                url: '{% url 'kurz:createSnippets' %}',
+                data: {
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    old_filename: init_filename,
+                    new_filename: new_filename + '.mp4',
+                },
+                error: (response) => {
+                    showError(response.responseText);
+                },
+                success: (response) => {
+                    if (response.startsWith('?')){
+                        showInfo('File exists - choose!')
+                        fileNames = response.slice(1).split('|')
+
+                        $('#video1').attr('src', '/kurz/words/' + fileNames[0])[0].load();
+                        loadText();
+                        $('#video2').attr('src', '/kurz/words/' + fileNames[1])[0].load();
+                        $('#video2')[0].play();
+                    }
+                    else {
+                        showSuccess(response)
+                        init_filename = response;
+                        $('#text').val('');
+                        $('#text').focus();
+                        $('#video1').attr('src', '/kurz/words/' + response)[0].load();
+                        loadText();
+                        $('#video1')[0].play();
+                    }
+                }
+            })
+        });
+
+        function pick(side) {
+            $.ajax({
+                method: 'POST',
+                url: '{% url 'kurz:createSnippets' %}',
+                data: {
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    keep: side,
+                    filename: $('#video1').attr('src').split('/').slice(-1).pop(),
+                },
+                error: (response) => {
+                    showError(response.responseText);
+                },
+                success: (response) => {
+                    if (response.startsWith('?')){
+                        showInfo('File exists - choose!')
+                        fileNames = response.slice(1).split('|')
+
+                        $('#video1').attr('src', '/kurz/words/' + fileNames[0])[0].load();
+                        loadText();
+                        $('#video2').attr('src', '/kurz/words/' + fileNames[1])[0].load();
+                        $('#video2')[0].play();
+                    }
+                    else {
+                        showSuccess(response)
+                        init_filename = response;
+                        $('#text').val('');
+                        $('#text').focus();
+                        $('#video1').attr('src', '/kurz/new-words/' + response)[0].load();
+                        loadText();
+                        $('#video1')[0].play();
+                    }
+                }
+            })
+        }
+
+        $(document).keyup(function(event){
+            if (event.originalEvent.key === 'ArrowDown' || event.originalEvent.key === 'ArrowRight'){
+                pick('false');
+            }
+            else if (event.originalEvent.key === 'ArrowLeft') {
+                pick('true');
+            }
+        })
+
+        function loadText(){
+            let parts = $('#video1').attr('src').split('/');
+            src_stripped = parts[parts.length - 1].split('-')[0];
+            $('#text').val(
+                src_stripped
+            );
+        }
+    </script>
+{% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-25 08:48+0000\n"
+"POT-Creation-Date: 2020-08-21 15:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,39 +47,39 @@ msgstr ""
 msgid "I agree with the <a href=\"{0}\">Terms of service</a>*"
 msgstr ""
 
-#: christophroyer/settings.py:122
+#: christophroyer/settings.py:123
 msgid "German"
 msgstr ""
 
-#: christophroyer/settings.py:123
+#: christophroyer/settings.py:124
 msgid "English"
 msgstr ""
 
-#: christophroyer/templates/base.html:83
+#: christophroyer/templates/base.html:86
 msgid "Start"
 msgstr ""
 
-#: christophroyer/templates/base.html:86
-#: christophroyer/templates/projects.html:6 christophroyer/urls.py:32
+#: christophroyer/templates/base.html:89
+#: christophroyer/templates/projects.html:6 christophroyer/urls.py:33
 msgid "Projects"
 msgstr ""
 
-#: christophroyer/templates/base.html:89
+#: christophroyer/templates/base.html:92
 #: christophroyer/templates/commissions.html:6
-#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:33
+#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:34
 msgid "Commissions"
 msgstr ""
 
-#: christophroyer/templates/base.html:99
-#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:31
+#: christophroyer/templates/base.html:102
+#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:32
 msgid "Privacy"
 msgstr ""
 
-#: christophroyer/templates/base.html:100
+#: christophroyer/templates/base.html:103
 msgid "Then you will know the truth, and the truth will set you free."
 msgstr ""
 
-#: christophroyer/templates/base.html:100
+#: christophroyer/templates/base.html:103
 msgid "John 8:32"
 msgstr ""
 
@@ -319,4 +319,54 @@ msgstr ""
 
 #: christophroyer/views.py:78
 msgid "Invalid data - please check your inputs for errors"
+msgstr ""
+
+#: kurz/templates/kurz.html:11 kurz/templates/kurz.html:17
+#: kurz/templates/kurz.html:24
+msgid "Quote from Chancellor Kurz"
+msgstr ""
+
+#: kurz/templates/kurz.html:11 kurz/templates/kurz.html:17
+#: kurz/templates/kurz.html:24
+msgid "Sebastian Short gives you a personal speech"
+msgstr ""
+
+#: kurz/templates/kurz.html:34
+msgid "Chancellor Kurz says what you tell him to"
+msgstr ""
+
+#: kurz/templates/kurz.html:42
+msgid "characters remaining"
+msgstr ""
+
+#: kurz/templates/kurz.html:45
+msgid "Share"
+msgstr ""
+
+#: kurz/templates/kurz.html:50
+msgid "Copy link"
+msgstr ""
+
+#: kurz/templates/kurz.html:71
+msgid "Talk!"
+msgstr ""
+
+#: kurz/templates/kurz.html:84
+msgid "Processing video - Please stay on this page"
+msgstr ""
+
+#: kurz/templates/kurz.html:85
+msgid "Your video is ready"
+msgstr ""
+
+#: kurz/templates/kurz.html:86
+msgid "Error while processing your video - Please try again"
+msgstr ""
+
+#: kurz/templates/kurz.html:88
+msgid "The video link was copied to your clipboard"
+msgstr ""
+
+#: kurz/views.py:23
+msgid "Method forbidden"
 msgstr ""

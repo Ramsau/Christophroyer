@@ -44,6 +44,9 @@
     <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 
     <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+
+    {% block additional_head %}
+    {% endblock %}
 </head>
 <body onresize="onResize()">
 <div id="alert-wrapper">
@@ -80,7 +83,7 @@
     <div class="ui inverted left inline visible vertical teal thin sidebar menu">
         {% block menu_items %}
             {% url 'index' as url %}
-            <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Start" %}</a>
+            <a class="item color-fade {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Start" %}</a>
 
             {% url 'projects' as url %}
             <a class="item {% ifequal url request.path%}active{% endifequal %}" href="{{ url }}">{% trans "Projects" %}</a>
