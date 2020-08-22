@@ -16,7 +16,7 @@ function submitText(text) {
         },
         success: (data) => {
             showSuccess(kurz_success);
-            $('#kurz_video').attr('src', 'video/' + data)[0].load();
+            $('#kurz_video').attr('src', '/kurz/video/' + data)[0].load();
 
             window.history.replaceState(null, null, '?vid=' + data)
             $('#share_facebook').attr('href',

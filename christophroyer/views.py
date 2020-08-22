@@ -7,10 +7,13 @@ from django.conf import settings
 
 import christophroyer.models as m
 from christophroyer import forms
-
+from kurz.views import main as kurz_main
 
 def index(request):
-    return render(request, 'index.html')
+    if request.META['HTTP_HOST'] == 'kurzspricht.at':
+        return kurz_main(request)
+    else:
+        return render(request, 'index.html')
 
 
 def privacy(request):
