@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-21 15:32+0000\n"
+"POT-Creation-Date: 2020-08-22 16:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,11 +243,11 @@ msgstr ""
 "<a href=\"https://flutter.dev\" target=\"_blank\">Flutter</a>, dazu noch "
 "kleine Einblicke in andere Frameworks."
 
-#: christophroyer/templates/mail_commission.html:28 christophroyer/views.py:43
+#: christophroyer/templates/mail_commission.html:28 christophroyer/views.py:46
 msgid "Project request"
 msgstr "Projektanfragen"
 
-#: christophroyer/templates/mail_commission.html:31 christophroyer/views.py:45
+#: christophroyer/templates/mail_commission.html:31 christophroyer/views.py:48
 msgid "proposed the following project:"
 msgstr "stellt folgendes Projekt vor:"
 
@@ -395,7 +395,7 @@ msgstr "Bild"
 msgid "Read more..."
 msgstr "Mehr..."
 
-#: christophroyer/views.py:48
+#: christophroyer/views.py:51
 msgid ""
 "This message was sent from christophroyer.com - If you didn't use this "
 "website, tell me via E-Mail (mail@christophroyer.com) and I will discard "
@@ -406,15 +406,15 @@ msgstr ""
 "(mail@christophroyer.com) mit, und ich werde Ihre Kontaktinformation "
 "verwerfen."
 
-#: christophroyer/views.py:74
+#: christophroyer/views.py:77
 msgid "Error while sending mail, please try again later"
 msgstr "Fehler beim senden der Mail, bitte versuchen sie es später nochmal"
 
-#: christophroyer/views.py:76
+#: christophroyer/views.py:79
 msgid "Your request was sent - I'll get in touch soon!"
 msgstr "Ihre Anfrage wurde gesendet - Ich melde mich bald!"
 
-#: christophroyer/views.py:78
+#: christophroyer/views.py:81
 msgid "Invalid data - please check your inputs for errors"
 msgstr "Ungültige Angaben - Bitte überprüfen Sie Ihre Eingaben auf Fehler"
 
@@ -431,6 +431,10 @@ msgstr "Unser Bundesbasti sagt, was du ihm vorschreibst"
 #: kurz/templates/kurz.html:34
 msgid "Chancellor Kurz says what you tell him to"
 msgstr "Kanzler Kurz sagt, was du ihm aufträgst"
+
+#: kurz/templates/kurz.html:40
+msgid "Type what Kurz should say..."
+msgstr "Schreib was Kurz sagen soll..."
 
 #: kurz/templates/kurz.html:42
 msgid "characters remaining"

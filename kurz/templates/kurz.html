@@ -34,10 +34,10 @@
     <h1>{% trans "Chancellor Kurz says what you tell him to" %}</h1>
     <div id="kurz-video-container">
         <div>
-            <video src="video/{% if clip %}{{ clip.id }}{% else %}greeting{% endif %}.mp4"
+            <video src="/kurz/video/{% if clip %}{{ clip.id }}{% else %}greeting{% endif %}.mp4"
                    controls="controls"
                    id="kurz_video"></video>
-            <textarea name="" id="kurz_text" cols="30" rows="6" maxlength="255" onkeyup="updateCharCount()">{% if clip %}{{ clip.text }}{% else %}Bayern gehört immer schon zu Österreich - jetzt ist der Zeitpunkt der Heimholung gekommen{% endif %}</textarea>
+            <textarea name="" id="kurz_text" cols="30" rows="6" maxlength="255" onkeyup="updateCharCount()" placeholder="{% trans "Type what Kurz should say..." %}">{% if clip %}{{ clip.text }}{% else %}{% endif %}</textarea>
             <span>
                 <span id="chars_remaining">255</span>/255 {% trans "characters remaining" %}
 
