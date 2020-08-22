@@ -7,6 +7,7 @@ let kurz_csrftoken;
 let kurz_processingText;
 function submitText(text) {
     showInfo(kurz_processingText);
+    $('#videoLoading').show();
     $.ajax({
         url: kurz_submitUrl,
         method: 'POST',
@@ -16,6 +17,7 @@ function submitText(text) {
         },
         success: (data) => {
             showSuccess(kurz_success);
+            $('#videoLoading').hide();
             $('#kurz_video').attr('src', '/kurz/video/' + data)[0].load();
 
             window.history.replaceState(null, null, '?vid=' + data)

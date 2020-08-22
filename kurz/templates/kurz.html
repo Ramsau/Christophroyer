@@ -31,13 +31,21 @@
 {% endblock %}
 
 {% block content %}<div id="fb-root"></div>
-    <h1>{% trans "Chancellor Kurz says what you tell him to" %}</h1>
+    <h1>{% trans "Chancellor Kurz says what you tell him to" %}:</h1>
     <div id="kurz-video-container">
         <div>
             <video src="/kurz/video/{% if clip %}{{ clip.id }}{% else %}greeting{% endif %}.mp4"
                    controls="controls"
                    id="kurz_video"></video>
-            <textarea name="" id="kurz_text" cols="30" rows="6" maxlength="255" onkeyup="updateCharCount()" placeholder="{% trans "Type what Kurz should say..." %}">{% if clip %}{{ clip.text }}{% else %}{% endif %}</textarea>
+            <div class="textAreaLoader">
+                <textarea name="" id="kurz_text" cols="30" rows="6" maxlength="255" onkeyup="updateCharCount()"
+                          placeholder="{% trans "Type what Kurz should say..." %}">{% if clip %}{{ clip.text }}{% else %}{% endif %}</textarea>
+                <div class="ui segment" style="display: none" id="videoLoading">
+                    <div class="ui active dimmer">
+                        <div class="ui text loader">{% trans "Your video is being processed" %}</div>
+                    </div>
+                </div>
+            </div>
             <span>
                 <span id="chars_remaining">255</span>/255 {% trans "characters remaining" %}
 
