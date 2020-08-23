@@ -28,6 +28,9 @@ def requestVideo(request):
     return HttpResponse(vid, status=200)
 
 def createSnippets(request):
+    return main(request)
+
+
     newWordSource = '/home/christoph/Documents/christophroyer/Kurz/words'
     files = []
     for (dirpath, dirnames, filenames) in os.walk(newWordSource):

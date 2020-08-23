@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-22 20:35+0000\n"
+"POT-Creation-Date: 2020-08-23 20:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -432,39 +432,43 @@ msgstr "Unser Bundesbasti sagt, was du ihm vorschreibst"
 msgid "Chancellor Kurz says what you tell him to"
 msgstr "Kanzler Kurz sagt, was du ihm aufträgst"
 
-#: kurz/templates/kurz.html:40
+#: kurz/templates/kurz.html:42
 msgid "Type what Kurz should say..."
 msgstr "Schreib was Kurz sagen soll..."
 
-#: kurz/templates/kurz.html:42
+#: kurz/templates/kurz.html:45
+msgid "Your video is being processed"
+msgstr "Dein Video wird verarbeitet"
+
+#: kurz/templates/kurz.html:50
 msgid "characters remaining"
 msgstr "Zeichen übrig"
 
-#: kurz/templates/kurz.html:45
+#: kurz/templates/kurz.html:53
 msgid "Share"
 msgstr "Teilen"
 
-#: kurz/templates/kurz.html:50
+#: kurz/templates/kurz.html:58
 msgid "Copy link"
 msgstr "Link kopieren"
 
-#: kurz/templates/kurz.html:71
+#: kurz/templates/kurz.html:79
 msgid "Talk!"
 msgstr "Sprich!"
 
-#: kurz/templates/kurz.html:84
+#: kurz/templates/kurz.html:92
 msgid "Processing video - Please stay on this page"
 msgstr "Video wird verarbeitet - Bitte auf dieser Seite bleiben"
 
-#: kurz/templates/kurz.html:85
+#: kurz/templates/kurz.html:93
 msgid "Your video is ready"
 msgstr "Dein Video ist bereit"
 
-#: kurz/templates/kurz.html:86
+#: kurz/templates/kurz.html:94
 msgid "Error while processing your video - Please try again"
 msgstr "Fehler beim Verarbeiten des Videos, versuch es nochmal"
 
-#: kurz/templates/kurz.html:88
+#: kurz/templates/kurz.html:96
 msgid "The video link was copied to your clipboard"
 msgstr "Der Videolink wurde in die Zwischenablage kopiert"
 
