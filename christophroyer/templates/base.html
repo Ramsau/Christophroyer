@@ -44,8 +44,28 @@
     <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 
     <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+    <script data-ad-client="ca-pub-5642550515510804" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     {% block additional_head %}
+    {% endblock %}
+
+    {% block metatags %}
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="{% trans "Christoph Royer is a web and software developer from Ramsau, Austria" %}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://christophroyer.com/">
+    <meta property="og:title" content="Christoph Royer">
+    <meta property="og:description" content="{% trans "Christoph Royer is a web and software developer from Ramsau, Austria" %}">
+    <meta property="og:image" content="{% static "img/profile.jpg" %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://christophroyer.com/">
+    <meta property="twitter:title" content="Christoph Royer">
+    <meta property="twitter:description" content="{% trans "Christoph Royer is a web and software developer from Ramsau, Austria" %}">
+    <meta property="twitter:image" content="{% static "img/profile.jpg" %}">
     {% endblock %}
 </head>
 <body onresize="onResize()">

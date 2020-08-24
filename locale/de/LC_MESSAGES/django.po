@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-22 16:26+0000\n"
+"POT-Creation-Date: 2020-08-24 11:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,32 +55,37 @@ msgstr "Deutsch"
 msgid "English"
 msgstr "Englisch"
 
-#: christophroyer/templates/base.html:86
+#: christophroyer/templates/base.html:54 christophroyer/templates/base.html:60
+#: christophroyer/templates/base.html:67
+msgid "Christoph Royer is a web and software developer from Ramsau, Austria"
+msgstr "Christoph Royer ist ein Webdesigner und Softwareentwickler aus der Ramsau, Österreich"
+
+#: christophroyer/templates/base.html:106
 msgid "Start"
 msgstr ""
 
-#: christophroyer/templates/base.html:89
+#: christophroyer/templates/base.html:109
 #: christophroyer/templates/projects.html:6 christophroyer/urls.py:33
 msgid "Projects"
 msgstr "Projekte"
 
-#: christophroyer/templates/base.html:92
+#: christophroyer/templates/base.html:112
 #: christophroyer/templates/commissions.html:6
 #: christophroyer/templates/commissions.html:10 christophroyer/urls.py:34
 msgid "Commissions"
 msgstr "Aufträge"
 
-#: christophroyer/templates/base.html:102
+#: christophroyer/templates/base.html:122
 #: christophroyer/templates/privacy.html:5 christophroyer/urls.py:32
 msgid "Privacy"
 msgstr "Datenschutz"
 
-#: christophroyer/templates/base.html:103
+#: christophroyer/templates/base.html:123
 msgid "Then you will know the truth, and the truth will set you free."
 msgstr ""
 "Und ihr werdet die Wahrheit erkennen, und die Wahrheit wird euch frei machen."
 
-#: christophroyer/templates/base.html:103
+#: christophroyer/templates/base.html:123
 msgid "John 8:32"
 msgstr "Joh 8:32"
 
@@ -418,53 +423,57 @@ msgstr "Ihre Anfrage wurde gesendet - Ich melde mich bald!"
 msgid "Invalid data - please check your inputs for errors"
 msgstr "Ungültige Angaben - Bitte überprüfen Sie Ihre Eingaben auf Fehler"
 
-#: kurz/templates/kurz.html:11 kurz/templates/kurz.html:17
-#: kurz/templates/kurz.html:24
+#: kurz/templates/kurz.html:8 kurz/templates/kurz.html:14
+#: kurz/templates/kurz.html:21
 msgid "Quote from Chancellor Kurz"
 msgstr "Zitat Kanzler Kurz"
 
-#: kurz/templates/kurz.html:11 kurz/templates/kurz.html:17
-#: kurz/templates/kurz.html:24
+#: kurz/templates/kurz.html:8 kurz/templates/kurz.html:14
+#: kurz/templates/kurz.html:21
 msgid "Sebastian Short gives you a personal speech"
 msgstr "Unser Bundesbasti sagt, was du ihm vorschreibst"
 
-#: kurz/templates/kurz.html:34
+#: kurz/templates/kurz.html:31
 msgid "Chancellor Kurz says what you tell him to"
 msgstr "Kanzler Kurz sagt, was du ihm aufträgst"
 
-#: kurz/templates/kurz.html:40
+#: kurz/templates/kurz.html:39
 msgid "Type what Kurz should say..."
 msgstr "Schreib was Kurz sagen soll..."
 
 #: kurz/templates/kurz.html:42
+msgid "Your video is being processed"
+msgstr "Dein Video wird verarbeitet"
+
+#: kurz/templates/kurz.html:47
 msgid "characters remaining"
 msgstr "Zeichen übrig"
 
-#: kurz/templates/kurz.html:45
+#: kurz/templates/kurz.html:50
 msgid "Share"
 msgstr "Teilen"
 
-#: kurz/templates/kurz.html:50
+#: kurz/templates/kurz.html:55
 msgid "Copy link"
 msgstr "Link kopieren"
 
-#: kurz/templates/kurz.html:71
+#: kurz/templates/kurz.html:76
 msgid "Talk!"
 msgstr "Sprich!"
 
-#: kurz/templates/kurz.html:84
+#: kurz/templates/kurz.html:89
 msgid "Processing video - Please stay on this page"
 msgstr "Video wird verarbeitet - Bitte auf dieser Seite bleiben"
 
-#: kurz/templates/kurz.html:85
+#: kurz/templates/kurz.html:90
 msgid "Your video is ready"
 msgstr "Dein Video ist bereit"
 
-#: kurz/templates/kurz.html:86
+#: kurz/templates/kurz.html:91
 msgid "Error while processing your video - Please try again"
 msgstr "Fehler beim Verarbeiten des Videos, versuch es nochmal"
 
-#: kurz/templates/kurz.html:88
+#: kurz/templates/kurz.html:93
 msgid "The video link was copied to your clipboard"
 msgstr "Der Videolink wurde in die Zwischenablage kopiert"
 
