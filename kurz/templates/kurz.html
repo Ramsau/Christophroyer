@@ -2,11 +2,8 @@
 {% load i18n %}
 {% load static %}
 
-{% block additional_head %}
-    <script data-ad-client="ca-pub-5642550515510804" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
+{% block metatags %}
     <!-- Primary Meta Tags -->
-    <title>Kurz Spricht</title>
     <meta name="title" content="Kurz Spricht">
     <meta name="description" content="{% if clip %}{% trans "Quote from Chancellor Kurz" %}: '{{ clip.text }}'{% else %}{% trans "Sebastian Short gives you a personal speech" %}{% endif %}">
 
