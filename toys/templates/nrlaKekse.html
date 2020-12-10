@@ -37,6 +37,7 @@
 {% block js %}
     <script>
         function fileLoad(event) {
+            showInfo('Bitte kurz warten, die Datei wird verarbeitet');
             reader = new FileReader();
 
             reader.readAsDataURL(event.target.files[0]);
