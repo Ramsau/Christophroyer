@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block metatags %}
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="NRLA-Kekse">
+    <meta name="description" content="Weihnachtliche NRLA-Übung">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://christophroyer.com/">
+    <meta property="og:title" content="NRLA-Kekse">
+    <meta property="og:description" content="Weihnachtliche NRLA-Übung">
+    <meta property="og:image" content="{% static "img/kurz-meta-img.jpg" %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://christophroyer.com/">
+    <meta property="twitter:title" content="NRLA-Kekse">
+    <meta property="twitter:description" content="Weihnachtliche NRLA-Übung">
+    <meta property="twitter:image" content="{% static "img/logo.svg" %}">
+
+{% endblock %}
+
+{% block title %}
+    NRLA-Kekse
+{% endblock %}
+
+{% block content %}
+    <h1>Gestalte deinen eigenen Hintergrund von NRLA-Blatt 10</h1>
+
+    <button class="ui button primary" onclick="$('#hiddenFile').click();">Hintergrund hochladen</button>
+    <input type="file" id="hiddenFile" hidden onchange="fileLoad(event)">
+{% endblock %}
+
+{% block js %}
+    <script>
+        function fileLoad(event) {
+            reader = new FileReader();
+
+            reader.readAsDataURL(event.target.files[0]);
+            reader.onload = () => {
+                $.ajax(
+                    '',
+                    {
+                        method: 'POST',
+                        data: {
+                            img: reader.result,
+                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                        },
+                        success: (resp) => {
+                            let link = document.createElement('a');
+                            link.href = 'data:application/pdf;base64,' + resp;
+                            link.download='merryNRLmAs.pdf';
+                            link.click();
+                        },
+                        error: (resp) => {
+                            showError(resp.responseText);
+                        }
+                    }
+                )
+            };
+        }
+    </script>
+{% endblock %}
