@@ -19,7 +19,7 @@ httplib2==0.18.1
 idna==2.10
 imageio==2.9.0
 imageio-ffmpeg==0.4.2
-lxml==4.5.2
+lxml==4.6.2
 marisa-trie==0.7.5
 moviepy==1.0.3
 munkres==1.1.2
