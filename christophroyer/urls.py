@@ -27,6 +27,7 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n'), name='set_language'),
     path('kurz/', include(('kurz.urls', 'kurz'), namespace='kurz')),
     path('toys/', include(('toys.urls', 'toys'), namespace='toys')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 urlpatterns += i18n_patterns(

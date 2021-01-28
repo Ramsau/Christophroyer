@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponse
 import os
 from django.conf import settings
@@ -5,6 +6,7 @@ import base64
 import datetime
 import fitz
 from PIL import Image, ImageEnhance
+import toys.models as m
 
 
 def nrlaKekse(request):
@@ -62,3 +64,23 @@ def nrlaKekse(request):
         os.remove(bg_img)
 
         return HttpResponse(resp_data)
+
+
+@login_required
+def setRemoteBoot(request):
+    if request.method == 'GET':
+        return render(request, 'remoteBoot.html')
+    else:
+        command = request.POST.get('set')
+        if command == 'on':
+            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'))
+        return HttpResponse('set')
+
+def remoteBoot(request):
+    # check if a boot signal is younger than a minute
+    newestSignal = m.BootSignal.objects.order_by('-timestamp').first()
+    if datetime.datetime.now() - newestSignal.timestamp.replace(tzinfo=None) < datetime.timedelta(minutes=1):
+        return HttpResponse('Please turn on my PC dear Pi')
+    else:
+        return HttpResponse('Do not turn it on')
+
