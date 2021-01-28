@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <button class="btn" onclick="set('on')">on</button>
+    <button class="btn" onclick="set('off')">off</button>
+{% endblock %}
+
+{% block js %}
+    <script>
+        function set(command) {
+            $.ajax(
+                '',
+                {
+                    method: 'POST',
+                    data: {
+                        set: command,
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
+                    },
+                    success: () => {
+                        showSuccess('Boot signal sent')
+                    },
+                    error: resp => {
+                        showError(resp.responseText);
+                    }
+                }
+            )
+        }
+    </script>
+{% endblock %}
