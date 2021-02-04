@@ -72,15 +72,17 @@ def setRemoteBoot(request):
         return render(request, 'remoteBoot.html')
     else:
         command = request.POST.get('set')
-        if command == 'on':
-            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'))
+        if command == 'Linux':
+            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='Linux')
+        elif command == 'Windows':
+            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='Windows')
         return HttpResponse('set')
 
 def remoteBoot(request):
     # check if a boot signal is younger than a minute
     newestSignal = m.BootSignal.objects.order_by('-timestamp').first()
     if datetime.datetime.now() - newestSignal.timestamp.replace(tzinfo=None) < datetime.timedelta(minutes=1):
-        return HttpResponse('Please turn on my PC dear Pi')
+        return HttpResponse('Please boot to ' + newestSignal.type + ' dear Pi')
     else:
         return HttpResponse('Do not turn it on')
 
