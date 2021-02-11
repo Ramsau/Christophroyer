@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-24 11:31+0000\n"
+"POT-Creation-Date: 2021-02-11 10:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,45 +47,47 @@ msgstr "Kopie an mich senden"
 msgid "I agree with the <a href=\"{0}\">Terms of service</a>*"
 msgstr "Ich stimme den <a href=\"{0}\">Nutzungsbestimmungen</a> zu*"
 
-#: christophroyer/settings.py:123
+#: christophroyer/settings.py:124
 msgid "German"
 msgstr "Deutsch"
 
-#: christophroyer/settings.py:124
+#: christophroyer/settings.py:125
 msgid "English"
 msgstr "Englisch"
 
-#: christophroyer/templates/base.html:54 christophroyer/templates/base.html:60
-#: christophroyer/templates/base.html:67
+#: christophroyer/templates/base.html:46 christophroyer/templates/base.html:52
+#: christophroyer/templates/base.html:59
 msgid "Christoph Royer is a web and software developer from Ramsau, Austria"
-msgstr "Christoph Royer ist ein Webdesigner und Softwareentwickler aus der Ramsau, Österreich"
+msgstr ""
+"Christoph Royer ist ein Webdesigner und Softwareentwickler aus der Ramsau, "
+"Österreich"
 
-#: christophroyer/templates/base.html:106
+#: christophroyer/templates/base.html:98
 msgid "Start"
 msgstr ""
 
-#: christophroyer/templates/base.html:109
-#: christophroyer/templates/projects.html:6 christophroyer/urls.py:33
+#: christophroyer/templates/base.html:101
+#: christophroyer/templates/projects.html:6 christophroyer/urls.py:35
 msgid "Projects"
 msgstr "Projekte"
 
-#: christophroyer/templates/base.html:112
+#: christophroyer/templates/base.html:104
 #: christophroyer/templates/commissions.html:6
-#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:34
+#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:36
 msgid "Commissions"
 msgstr "Aufträge"
 
-#: christophroyer/templates/base.html:122
-#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:32
+#: christophroyer/templates/base.html:114
+#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:34
 msgid "Privacy"
 msgstr "Datenschutz"
 
-#: christophroyer/templates/base.html:123
+#: christophroyer/templates/base.html:115
 msgid "Then you will know the truth, and the truth will set you free."
 msgstr ""
 "Und ihr werdet die Wahrheit erkennen, und die Wahrheit wird euch frei machen."
 
-#: christophroyer/templates/base.html:123
+#: christophroyer/templates/base.html:115
 msgid "John 8:32"
 msgstr "Joh 8:32"
 
@@ -199,23 +201,22 @@ msgstr "Profilfoto"
 #: christophroyer/templates/index.html:29
 msgid ""
 "\n"
-"            I'm currently 19 years old, living in Ramsau, Austria. After "
-"spending the summer developing software\n"
-"            and taking freelance work, I will start studying Computer "
-"science in Graz.</p>\n"
+"            I'm currently 19 years old and I come from Ramsau, Austria. "
+"Since autumn of 2020, I have been studying\n"
+"            Computer Science at <a href=\"https://www.tugraz.at\" target="
+"\"_blank\">TU Graz</a>.\n"
 "            "
 msgstr ""
 "\n"
-"Ich bin 19 Jahre alt und wohne in der Ramsau, Österreich. Nachdem ich den "
-"Sommer damit verbringe, zu programmieren und freiberuflich Aufträge zu "
-"bearbeiten, werde ich im Herbst 2020 in Graz mit dem Informatik-Studium "
-"beginnen."
+"Ich bin 19 Jahre alt und komme aus der Ramsau, Österreich. Seit dem Herbst 2020 "
+"studiere ich an der <a href=\"https://www.tugraz.at\" target="
+"\"_blank\">TU Graz</a> Informatik."
 
-#: christophroyer/templates/index.html:34
+
+#: christophroyer/templates/index.html:35
 msgid ""
 "\n"
-"            Everything I know about Software by now is self-taught through "
-"online sources: while studying\n"
+"            While studying\n"
 "            at Highschool in Radstadt, I started taking an interest in "
 "software development. After my first year coding in\n"
 "            <a href=\"https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-"
@@ -224,8 +225,8 @@ msgid ""
 "to\n"
 "            <a href=\"https://python.org\" target=\"_blank\">Python</a>, "
 "which is my main strength to this\n"
-"            day. But through my various projects involving many different "
-"environments I do have a wider base of\n"
+"            day. But through my various pet projects and university courses "
+"I do have a wider base of\n"
 "            knowledge: from <a href=\"https://arduino.cc\" target=\"_blank"
 "\">Arduino</a>'s C to the \"big three\"\n"
 "            of web development - JavaScript, Html and CSS - but also\n"
@@ -235,14 +236,13 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Alles was ich bis jetzt über Software weiß habe ich mir selbst durch "
-"Onlinekurse angeeignet: Während ich in Radstadt im BORG war, entwickelte ich "
+"Während ich in Radstadt im BORG war, entwickelte ich "
 "ein Interesse an Softwareentwicklung. Nach dem ersten Jahr mit <a href="
 "\"https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/\" target="
 "\"_blank\">C#</a> - wo ich die Grundsätze des Programmierens erfahren konnte "
 "- fing ich mit <a href=\"https://python.org\" target=\"_blank\">Python</a> "
-"an, was bis heute meine Stärke ist. Doch durch zahlreiche andere Projekte "
-"habe ich noch einige andere Umgebungen kennen gelernt: Von <a href=\"https://"
+"an, was bis heute meine Stärke ist. Doch durch zahlreiche andere Hobbyprojekte "
+"und Uni-Kurse habe ich noch einige andere Umgebungen kennen gelernt: Von <a href=\"https://"
 "arduino.cc\" target=\"_blank\">Arduino</a>'s C über den Grundstock der "
 "Webentwicklung - JavaScript, Html und CSS - bis hin zu App-Entwicklung mit "
 "<a href=\"https://flutter.dev\" target=\"_blank\">Flutter</a>, dazu noch "
@@ -480,6 +480,20 @@ msgstr "Der Videolink wurde in die Zwischenablage kopiert"
 #: kurz/views.py:23
 msgid "Method forbidden"
 msgstr "Methode nicht erlaubt"
+
+#~ msgid ""
+#~ "\n"
+#~ "            I'm currently 19 years old, living in Ramsau, Austria. After "
+#~ "spending the summer developing software\n"
+#~ "            and taking freelance work, I will start studying Computer "
+#~ "science in Graz.</p>\n"
+#~ "            "
+#~ msgstr ""
+#~ "\n"
+#~ "Ich bin 19 Jahre alt und wohne in der Ramsau, Österreich. Nachdem ich den "
+#~ "Sommer damit verbringe, zu programmieren und freiberuflich Aufträge zu "
+#~ "bearbeiten, werde ich im Herbst 2020 in Graz mit dem Informatik-Studium "
+#~ "beginnen."
 
 #~ msgid "I'm not tracking or storing anything at the moment."
 #~ msgstr "Ich analysiere oder speichere zur Zeit gar nichts."
