@@ -61,5 +61,5 @@ sqlparse==0.3.0
 tqdm==4.48.0
 unicodecsv==0.14.1
 uritemplate==3.0.1
-urllib3==1.25.10
+urllib3==1.26.5
 webencodings==0.5.1
