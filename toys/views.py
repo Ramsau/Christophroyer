@@ -76,13 +76,18 @@ def setRemoteBoot(request):
             m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='Linux')
         elif command == 'Windows':
             m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='Windows')
+        elif command == 'ForceShutdown':
+            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='ForceShutdown')
         return HttpResponse('set')
 
 def remoteBoot(request):
     # check if a boot signal is younger than a minute
     newestSignal = m.BootSignal.objects.order_by('-timestamp').first()
     if datetime.datetime.now() - newestSignal.timestamp.replace(tzinfo=None) < datetime.timedelta(minutes=1):
-        return HttpResponse('Please boot to ' + newestSignal.type + ' dear Pi')
+        if newestSignal.type == 'ForceShutdown':
+            return HttpResponse('Get nuked')
+        else:
+            return HttpResponse('Please boot to ' + newestSignal.type + ' dear Pi')
     else:
         return HttpResponse('Do not turn it on')
 
