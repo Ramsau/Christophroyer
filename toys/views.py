@@ -74,6 +74,8 @@ def setRemoteBoot(request):
         command = request.POST.get('set')
         if command == 'Linux':
             m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='Linux')
+        if command == 'LinuxVNC':
+            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='LinuxVNC')
         elif command == 'Windows':
             m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='Windows')
         elif command == 'ForceShutdown':
@@ -86,6 +88,8 @@ def remoteBoot(request):
     if datetime.datetime.now() - newestSignal.timestamp.replace(tzinfo=None) < datetime.timedelta(minutes=1):
         if newestSignal.type == 'ForceShutdown':
             return HttpResponse('Get nuked')
+        elif newestSignal.type == 'LinuxVNC':
+            return HttpResponse('Please boot to Linux with VNC dear Pi')
         else:
             return HttpResponse('Please boot to ' + newestSignal.type + ' dear Pi')
     else:
