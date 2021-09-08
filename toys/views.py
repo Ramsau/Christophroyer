@@ -1,6 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, HttpResponse
+from django.views.static import serve
+
 import os
 from django.conf import settings
 import base64
@@ -111,3 +113,7 @@ def uploadImage(request):
             return HttpResponse('No Image provided', status=400)
     else:
         return HttpResponse('Unauthorized', status=401)
+
+
+def showImage(request):
+    return serve(request, 'img.jpg', settings.REMOTE_BOOT_IMAGE_PATH)
