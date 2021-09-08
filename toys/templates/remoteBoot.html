@@ -1,10 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
     <button class="btn" onclick="set('Linux')">Linux</button>
     <button class="btn" onclick="set('LinuxVNC')">Linux[VNC]</button>
     <button class="btn" onclick="set('Windows')">Windows</button>
     <button class="btn" onclick="set('ForceShutdown')">Force Shutdown</button>
+    <button class="btn" onclick="set('TakeImage')">Take Image</button><br>
+    <img src="{% url 'toys:viewRemoteBoot' %}/bootImage/img.jpg" alt="Latest image of remote desktop"
+        style="max-width: 100%;">
 {% endblock %}
 
 {% block js %}
@@ -19,7 +23,7 @@
                         csrfmiddlewaretoken: '{{ csrf_token }}',
                     },
                     success: () => {
-                        showSuccess('Boot signal sent')
+                        showSuccess('Signal sent: ' + command);
                     },
                     error: resp => {
                         showError(resp.responseText);

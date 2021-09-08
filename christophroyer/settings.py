@@ -155,6 +155,8 @@ KURZ_CLIPS = os.path.join(MEDIA_ROOT, 'kurz')
 KURZ_MAX_CACHE = 3600  # in seconds
 KURZ_ENABLE_CACHE = True
 
+REMOTE_BOOT_SECRET = 'UltraSecret'
+REMOTE_BOOT_IMAGE_PATH = os.path.join(MEDIA_ROOT, 'bootImage')
 
 try:
     from .local_settings import *

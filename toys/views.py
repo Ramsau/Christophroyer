@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, HttpResponse
 import os
 from django.conf import settings
@@ -72,15 +73,12 @@ def setRemoteBoot(request):
         return render(request, 'remoteBoot.html')
     else:
         command = request.POST.get('set')
-        if command == 'Linux':
-            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='Linux')
-        if command == 'LinuxVNC':
-            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='LinuxVNC')
-        elif command == 'Windows':
-            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='Windows')
-        elif command == 'ForceShutdown':
-            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type='ForceShutdown')
-        return HttpResponse('set')
+        if command in ['Linux', 'LinuxVNC', 'Windows', 'TakeImage', 'ForceShutdown']:
+            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type=command)
+            return HttpResponse('set')
+        else:
+            return HttpResponse('Invalid command: ' + command, status=400)
+
 
 def remoteBoot(request):
     # check if a boot signal is younger than a minute
@@ -90,8 +88,26 @@ def remoteBoot(request):
             return HttpResponse('Get nuked')
         elif newestSignal.type == 'LinuxVNC':
             return HttpResponse('Please boot to Linux with VNC dear Pi')
+        elif newestSignal.type == 'TakeImage':
+            return HttpResponse('Please take a Picture of me')
         else:
             return HttpResponse('Please boot to ' + newestSignal.type + ' dear Pi')
     else:
         return HttpResponse('Do not turn it on')
 
+
+@csrf_exempt
+def uploadImage(request):
+    if not request.method == 'POST':
+        return HttpResponse('Method not allowed', status=405)
+
+    if request.POST.get('secretString', '') == settings.REMOTE_BOOT_SECRET:
+        if request.FILES.get('img'):
+            with open(os.path.join(settings.REMOTE_BOOT_IMAGE_PATH, 'img.jpg'), 'wb+') as dest:
+                for chunk in request.FILES['img']:
+                    dest.write(chunk)
+            return HttpResponse('Done')
+        else:
+            return HttpResponse('No Image provided', status=400)
+    else:
+        return HttpResponse('Unauthorized', status=401)
