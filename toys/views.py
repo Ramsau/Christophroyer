@@ -86,14 +86,7 @@ def remoteBoot(request):
     # check if a boot signal is younger than a minute
     newestSignal = m.BootSignal.objects.order_by('-timestamp').first()
     if datetime.datetime.now() - newestSignal.timestamp.replace(tzinfo=None) < datetime.timedelta(minutes=1):
-        if newestSignal.type == 'ForceShutdown':
-            return HttpResponse('Get nuked')
-        elif newestSignal.type == 'LinuxVNC':
-            return HttpResponse('Please boot to Linux with VNC dear Pi')
-        elif newestSignal.type == 'TakeImage':
-            return HttpResponse('Please take a Picture of me')
-        else:
-            return HttpResponse('Please boot to ' + newestSignal.type + ' dear Pi')
+        return HttpResponse(newestSignal.type)
     else:
         return HttpResponse('Do not turn it on')
 
