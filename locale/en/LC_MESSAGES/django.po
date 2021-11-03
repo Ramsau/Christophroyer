@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-11 10:48+0000\n"
+"POT-Creation-Date: 2021-11-03 07:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,11 +47,11 @@ msgstr ""
 msgid "I agree with the <a href=\"{0}\">Terms of service</a>*"
 msgstr ""
 
-#: christophroyer/settings.py:124
+#: christophroyer/settings.py:125
 msgid "German"
 msgstr ""
 
-#: christophroyer/settings.py:125
+#: christophroyer/settings.py:126
 msgid "English"
 msgstr ""
 
@@ -163,8 +163,8 @@ msgstr ""
 #: christophroyer/templates/index.html:29
 msgid ""
 "\n"
-"            I'm currently 19 years old and I come from Ramsau, Austria. "
-"Since autumn of 2020, I have been studying\n"
+"            I was born in 2001 and I come from Ramsau, Austria. Since autumn "
+"of 2020, I have been studying\n"
 "            Computer Science at <a href=\"https://www.tugraz.at\" target="
 "\"_blank\">TU Graz</a>.\n"
 "            "
@@ -189,7 +189,10 @@ msgid ""
 "            of web development - JavaScript, Html and CSS - but also\n"
 "            App development with <a href=\"https://flutter.dev\" target="
 "\"_blank\">Flutter</a>, among bits and pieces\n"
-"            from other frameworks.\n"
+"            from other frameworks.<br>\n"
+"            In University, i have been learning a lot about the theoretical "
+"side of computer science, as well as\n"
+"            getting hands-on experience in C, C++, SQL and Java.\n"
 "            "
 msgstr ""
 
