@@ -1,19 +1,16 @@
+import christophroyer.models as m
+from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
-from django.http import HttpResponse
-from django.core.mail import EmailMultiAlternatives
 from django.utils.translation import ugettext_lazy as _, ugettext as gt
-from django.conf import settings
 
-import christophroyer.models as m
 from christophroyer import forms
-from kurz.views import main as kurz_main
+
 
 def index(request):
-    if request.META['HTTP_HOST'] == 'kurzspricht.at':
-        return kurz_main(request)
-    else:
-        return render(request, 'index.html')
+    return render(request, 'index.html')
 
 
 def privacy(request):
