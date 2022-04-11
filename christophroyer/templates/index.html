@@ -8,19 +8,19 @@
 
 {% block content %}
         <p>
+            {% url "projects" as projects_url %}
             {% blocktrans %}
-            I'm a self-taught programmer with a focus on individually made websites for you and your business.<br>
-            Whether you only want a small page to tell the online world that you exist, or you want your whole
-            booking system online, including a personal phone app - or anywhere in between - I have you covered.<br>
-            I will help you decide what solution is best for you and develop it according to your ideas.
+            I'm a self-taught programmer with a focus on learning new things and making possible whatever
+                I find interesting.<br>
+            Continue reading to learn more about me, or go look at a few of my <a href="{{ projects_url }}">Projects</a>.
             {% endblocktrans %}
         </p>
         <h3>{% trans "Don't settle for the known." %}</h3>
         <p>
             {% blocktrans %}
-            Nowadays, everything can - and is - copied from others, which is why it's important to me to
+            Nowadays, everything can be - and is - copied from others, which is why it's important to me to
             keep improving, reiterating and reimagining. How would we stand out after all if everything has to look the same?<br>
-            Because of this, I create each project with its own style and feel, to make it uniquely yours.
+            Because of this, I create each project with its own style and feel, sometimes stubbornly building from the ground up just to make the project truly mine.
             {% endblocktrans %}
         </p>
         <h3>{% trans "About me" %}</h3>

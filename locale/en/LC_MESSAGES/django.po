@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-03 07:15+0000\n"
+"POT-Creation-Date: 2022-04-11 19:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,11 +47,11 @@ msgstr ""
 msgid "I agree with the <a href=\"{0}\">Terms of service</a>*"
 msgstr ""
 
-#: christophroyer/settings.py:125
+#: christophroyer/settings.py:124
 msgid "German"
 msgstr ""
 
-#: christophroyer/settings.py:126
+#: christophroyer/settings.py:125
 msgid "English"
 msgstr ""
 
@@ -65,18 +65,18 @@ msgid "Start"
 msgstr ""
 
 #: christophroyer/templates/base.html:101
-#: christophroyer/templates/projects.html:6 christophroyer/urls.py:35
+#: christophroyer/templates/projects.html:6 christophroyer/urls.py:34
 msgid "Projects"
 msgstr ""
 
 #: christophroyer/templates/base.html:104
 #: christophroyer/templates/commissions.html:6
-#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:36
+#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:35
 msgid "Commissions"
 msgstr ""
 
 #: christophroyer/templates/base.html:114
-#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:34
+#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:33
 msgid "Privacy"
 msgstr ""
 
@@ -122,17 +122,15 @@ msgstr ""
 msgid "Sending mail, please wait..."
 msgstr ""
 
-#: christophroyer/templates/index.html:11
+#: christophroyer/templates/index.html:12
+#, python-format
 msgid ""
 "\n"
-"            I'm a self-taught programmer with a focus on individually made "
-"websites for you and your business.<br>\n"
-"            Whether you only want a small page to tell the online world that "
-"you exist, or you want your whole\n"
-"            booking system online, including a personal phone app - or "
-"anywhere in between - I have you covered.<br>\n"
-"            I will help you decide what solution is best for you and develop "
-"it according to your ideas.\n"
+"            I'm a self-taught programmer with a focus on learning new things "
+"and making possible whatever\n"
+"                I find interesting.<br>\n"
+"            Continue reading to learn more about me, or go look at a few of "
+"my <a href=\"%(projects_url)s\">Projects</a>.\n"
 "            "
 msgstr ""
 
@@ -143,12 +141,13 @@ msgstr ""
 #: christophroyer/templates/index.html:20
 msgid ""
 "\n"
-"            Nowadays, everything can - and is - copied from others, which is "
-"why it's important to me to\n"
+"            Nowadays, everything can be - and is - copied from others, which "
+"is why it's important to me to\n"
 "            keep improving, reiterating and reimagining. How would we stand "
 "out after all if everything has to look the same?<br>\n"
 "            Because of this, I create each project with its own style and "
-"feel, to make it uniquely yours.\n"
+"feel, sometimes stubbornly building from the ground up just to make the "
+"project truly mine.\n"
 "            "
 msgstr ""
 
@@ -190,17 +189,17 @@ msgid ""
 "            App development with <a href=\"https://flutter.dev\" target="
 "\"_blank\">Flutter</a>, among bits and pieces\n"
 "            from other frameworks.<br>\n"
-"            In University, i have been learning a lot about the theoretical "
+"            In University, I have been learning a lot about the theoretical "
 "side of computer science, as well as\n"
 "            getting hands-on experience in C, C++, SQL and Java.\n"
 "            "
 msgstr ""
 
-#: christophroyer/templates/mail_commission.html:28 christophroyer/views.py:46
+#: christophroyer/templates/mail_commission.html:28 christophroyer/views.py:43
 msgid "Project request"
 msgstr ""
 
-#: christophroyer/templates/mail_commission.html:31 christophroyer/views.py:48
+#: christophroyer/templates/mail_commission.html:31 christophroyer/views.py:45
 msgid "proposed the following project:"
 msgstr ""
 
@@ -301,87 +300,29 @@ msgid ""
 "            "
 msgstr ""
 
-#: christophroyer/templates/projects.html:15
+#: christophroyer/templates/projects.html:17
 msgid "Image"
 msgstr ""
 
-#: christophroyer/templates/projects.html:19
+#: christophroyer/templates/projects.html:23
 msgid "Read more..."
 msgstr ""
 
-#: christophroyer/views.py:51
+#: christophroyer/views.py:48
 msgid ""
 "This message was sent from christophroyer.com - If you didn't use this "
 "website, tell me via E-Mail (mail@christophroyer.com) and I will discard "
 "your information"
 msgstr ""
 
-#: christophroyer/views.py:77
+#: christophroyer/views.py:74
 msgid "Error while sending mail, please try again later"
 msgstr ""
 
-#: christophroyer/views.py:79
+#: christophroyer/views.py:76
 msgid "Your request was sent - I'll get in touch soon!"
 msgstr ""
 
-#: christophroyer/views.py:81
+#: christophroyer/views.py:78
 msgid "Invalid data - please check your inputs for errors"
-msgstr ""
-
-#: kurz/templates/kurz.html:8 kurz/templates/kurz.html:14
-#: kurz/templates/kurz.html:21
-msgid "Quote from Chancellor Kurz"
-msgstr ""
-
-#: kurz/templates/kurz.html:8 kurz/templates/kurz.html:14
-#: kurz/templates/kurz.html:21
-msgid "Sebastian Short gives you a personal speech"
-msgstr ""
-
-#: kurz/templates/kurz.html:31
-msgid "Chancellor Kurz says what you tell him to"
-msgstr ""
-
-#: kurz/templates/kurz.html:39
-msgid "Type what Kurz should say..."
-msgstr ""
-
-#: kurz/templates/kurz.html:42
-msgid "Your video is being processed"
-msgstr ""
-
-#: kurz/templates/kurz.html:47
-msgid "characters remaining"
-msgstr ""
-
-#: kurz/templates/kurz.html:50
-msgid "Share"
-msgstr ""
-
-#: kurz/templates/kurz.html:55
-msgid "Copy link"
-msgstr ""
-
-#: kurz/templates/kurz.html:76
-msgid "Talk!"
-msgstr ""
-
-#: kurz/templates/kurz.html:89
-msgid "Processing video - Please stay on this page"
-msgstr ""
-
-#: kurz/templates/kurz.html:90
-msgid "Your video is ready"
-msgstr ""
-
-#: kurz/templates/kurz.html:91
-msgid "Error while processing your video - Please try again"
-msgstr ""
-
-#: kurz/templates/kurz.html:93
-msgid "The video link was copied to your clipboard"
-msgstr ""
-
-#: kurz/views.py:23
-msgid "Method forbidden"
 msgstr ""

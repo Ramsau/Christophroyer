@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-03 07:15+0000\n"
+"POT-Creation-Date: 2022-04-11 19:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,11 +47,11 @@ msgstr "Kopie an mich senden"
 msgid "I agree with the <a href=\"{0}\">Terms of service</a>*"
 msgstr "Ich stimme den <a href=\"{0}\">Nutzungsbestimmungen</a> zu*"
 
-#: christophroyer/settings.py:125
+#: christophroyer/settings.py:124
 msgid "German"
 msgstr "Deutsch"
 
-#: christophroyer/settings.py:126
+#: christophroyer/settings.py:125
 msgid "English"
 msgstr "Englisch"
 
@@ -67,18 +67,18 @@ msgid "Start"
 msgstr ""
 
 #: christophroyer/templates/base.html:101
-#: christophroyer/templates/projects.html:6 christophroyer/urls.py:35
+#: christophroyer/templates/projects.html:6 christophroyer/urls.py:34
 msgid "Projects"
 msgstr "Projekte"
 
 #: christophroyer/templates/base.html:104
 #: christophroyer/templates/commissions.html:6
-#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:36
+#: christophroyer/templates/commissions.html:10 christophroyer/urls.py:35
 msgid "Commissions"
 msgstr "Aufträge"
 
 #: christophroyer/templates/base.html:114
-#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:34
+#: christophroyer/templates/privacy.html:5 christophroyer/urls.py:33
 msgid "Privacy"
 msgstr "Datenschutz"
 
@@ -144,28 +144,22 @@ msgstr "Senden"
 msgid "Sending mail, please wait..."
 msgstr "Mail wird gesendet, bitte warten..."
 
-#: christophroyer/templates/index.html:11
+#: christophroyer/templates/index.html:12
+#, python-format
 msgid ""
 "\n"
-"            I'm a self-taught programmer with a focus on individually made "
-"websites for you and your business.<br>\n"
-"            Whether you only want a small page to tell the online world that "
-"you exist, or you want your whole\n"
-"            booking system online, including a personal phone app - or "
-"anywhere in between - I have you covered.<br>\n"
-"            I will help you decide what solution is best for you and develop "
-"it according to your ideas.\n"
+"            I'm a self-taught programmer with a focus on learning new things "
+"and making possible whatever\n"
+"                I find interesting.<br>\n"
+"            Continue reading to learn more about me, or go look at a few of "
+"my <a href=\"%(projects_url)s\">Projects</a>.\n"
 "            "
 msgstr ""
 "\n"
-"Ich bin ein selbstständiger Softwareentwickler mit einem Fokus auf "
-"individuelle Webseiten für Sie und Ihr Unternehmen.<br>\n"
-" Ob Sie nur eine kleine Seite brauchen, um sich der Online-Welt zu zeigen, "
-"ob Sie Ihr ganzes Buchungssystem samt eigener Handy-App online haben wollen "
-"- oder alles dazwischen - ich kann Ihnen weiterhelfen.<br>\n"
-" Ich berate Sie, welche Lösung für Sie am sinnvollsten ist, und entwickle "
-"Sie nach Ihren Ideen.\n"
-"            "
+"Ich bin ein selbstständiger Softwareentickler mit einem Fokus darauf, neue Fähigkeiten zu "
+"erlernen und möglich zu machen, was mir interessant vorkommt.<br>\n"
+"Lesen Sie weiter, um mehr über mich zu erfahren, oder schauen Sie sich ein paar meiner "
+"<a href=\"%(projects_url)s\">Projekte</a> an."
 
 #: christophroyer/templates/index.html:18
 msgid "Don't settle for the known."
@@ -174,12 +168,13 @@ msgstr "Nicht mit dem Bekannten zufrieden geben."
 #: christophroyer/templates/index.html:20
 msgid ""
 "\n"
-"            Nowadays, everything can - and is - copied from others, which is "
-"why it's important to me to\n"
+"            Nowadays, everything can be - and is - copied from others, which "
+"is why it's important to me to\n"
 "            keep improving, reiterating and reimagining. How would we stand "
 "out after all if everything has to look the same?<br>\n"
 "            Because of this, I create each project with its own style and "
-"feel, to make it uniquely yours.\n"
+"feel, sometimes stubbornly building from the ground up just to make the "
+"project truly mine.\n"
 "            "
 msgstr ""
 "\n"
@@ -187,8 +182,9 @@ msgstr ""
 "es wichtig, sich weiter zu entwickeln, neue Wege zu gehen und Neues zu "
 "schaffen. Wie würden wir sonst noch herausstechen, wenn alles gleich "
 "aussehen muss?<br>\n"
-"Aus dieser Überzeugung heraus entwickle ich jedes meiner Projekte heraus in "
-"seinem eigenen Stil, um es einzigartig für Sie anzupassen"
+"Aus dieser Überzeugung heraus entwickle ich jedes meiner Projekte  in "
+"seinem eigenen Stil, wobei ich oft stur vom Grund auf alles neu baue, damit das "
+"Endprodukt wirklich mein Werk ist."
 
 #: christophroyer/templates/index.html:26
 msgid "About me"
@@ -249,14 +245,16 @@ msgstr ""
 "Webentwicklung - JavaScript, Html und CSS - bis hin zu App-Entwicklung mit "
 "<a href=\"https://flutter.dev\" target=\"_blank\">Flutter</a>, dazu noch "
 "kleine Einblicke in andere Frameworks.<br>\n"
-"In der Universität konnte ich viel über den theoretischen Hintergrund der Informatik lernen, "
-"darüber hinaus konnte ich meine praktische Erfahrung in C, C++, SQL und Java ausbauen.\n"
+"In der Universität konnte ich viel über den theoretischen Hintergrund der "
+"Informatik lernen, darüber hinaus konnte ich meine praktische Erfahrung in "
+"C, C++, SQL und Java ausbauen.\n"
 "            "
-#: christophroyer/templates/mail_commission.html:28 christophroyer/views.py:46
+
+#: christophroyer/templates/mail_commission.html:28 christophroyer/views.py:43
 msgid "Project request"
 msgstr "Projektanfragen"
 
-#: christophroyer/templates/mail_commission.html:31 christophroyer/views.py:48
+#: christophroyer/templates/mail_commission.html:31 christophroyer/views.py:45
 msgid "proposed the following project:"
 msgstr "stellt folgendes Projekt vor:"
 
@@ -396,15 +394,15 @@ msgstr ""
 "\"_blank\">Browser-Add-ons zur Deaktivierung von Google Analytics</a> "
 "unterbinden."
 
-#: christophroyer/templates/projects.html:15
+#: christophroyer/templates/projects.html:17
 msgid "Image"
 msgstr "Bild"
 
-#: christophroyer/templates/projects.html:19
+#: christophroyer/templates/projects.html:23
 msgid "Read more..."
 msgstr "Mehr..."
 
-#: christophroyer/views.py:51
+#: christophroyer/views.py:48
 msgid ""
 "This message was sent from christophroyer.com - If you didn't use this "
 "website, tell me via E-Mail (mail@christophroyer.com) and I will discard "
@@ -415,75 +413,81 @@ msgstr ""
 "(mail@christophroyer.com) mit, und ich werde Ihre Kontaktinformation "
 "verwerfen."
 
-#: christophroyer/views.py:77
+#: christophroyer/views.py:74
 msgid "Error while sending mail, please try again later"
 msgstr "Fehler beim senden der Mail, bitte versuchen sie es später nochmal"
 
-#: christophroyer/views.py:79
+#: christophroyer/views.py:76
 msgid "Your request was sent - I'll get in touch soon!"
 msgstr "Ihre Anfrage wurde gesendet - Ich melde mich bald!"
 
-#: christophroyer/views.py:81
+#: christophroyer/views.py:78
 msgid "Invalid data - please check your inputs for errors"
 msgstr "Ungültige Angaben - Bitte überprüfen Sie Ihre Eingaben auf Fehler"
 
-#: kurz/templates/kurz.html:8 kurz/templates/kurz.html:14
-#: kurz/templates/kurz.html:21
-msgid "Quote from Chancellor Kurz"
-msgstr "Zitat Kanzler Kurz"
+#~ msgid ""
+#~ "\n"
+#~ "            I'm a self-taught programmer with a focus on individually "
+#~ "made websites for you and your business.<br>\n"
+#~ "            Whether you only want a small page to tell the online world "
+#~ "that you exist, or you want your whole\n"
+#~ "            booking system online, including a personal phone app - or "
+#~ "anywhere in between - I have you covered.<br>\n"
+#~ "            I will help you decide what solution is best for you and "
+#~ "develop it according to your ideas.\n"
+#~ "            "
+#~ msgstr ""
+#~ "\n"
+#~ "Ich bin ein selbstständiger Softwareentwickler mit einem Fokus auf "
+#~ "individuelle Webseiten für Sie und Ihr Unternehmen.<br>\n"
+#~ " Ob Sie nur eine kleine Seite brauchen, um sich der Online-Welt zu "
+#~ "zeigen, ob Sie Ihr ganzes Buchungssystem samt eigener Handy-App online "
+#~ "haben wollen - oder alles dazwischen - ich kann Ihnen weiterhelfen.<br>\n"
+#~ " Ich berate Sie, welche Lösung für Sie am sinnvollsten ist, und entwickle "
+#~ "Sie nach Ihren Ideen.\n"
+#~ "            "
 
-#: kurz/templates/kurz.html:8 kurz/templates/kurz.html:14
-#: kurz/templates/kurz.html:21
-msgid "Sebastian Short gives you a personal speech"
-msgstr "Unser Bundesbasti sagt, was du ihm vorschreibst"
+#~ msgid "Quote from Chancellor Kurz"
+#~ msgstr "Zitat Kanzler Kurz"
 
-#: kurz/templates/kurz.html:31
-msgid "Chancellor Kurz says what you tell him to"
-msgstr "Kanzler Kurz sagt, was du ihm aufträgst"
+#~ msgid "Sebastian Short gives you a personal speech"
+#~ msgstr "Unser Bundesbasti sagt, was du ihm vorschreibst"
 
-#: kurz/templates/kurz.html:39
-msgid "Type what Kurz should say..."
-msgstr "Schreib was Kurz sagen soll..."
+#~ msgid "Chancellor Kurz says what you tell him to"
+#~ msgstr "Kanzler Kurz sagt, was du ihm aufträgst"
 
-#: kurz/templates/kurz.html:42
-msgid "Your video is being processed"
-msgstr "Dein Video wird verarbeitet"
+#~ msgid "Type what Kurz should say..."
+#~ msgstr "Schreib was Kurz sagen soll..."
 
-#: kurz/templates/kurz.html:47
-msgid "characters remaining"
-msgstr "Zeichen übrig"
+#~ msgid "Your video is being processed"
+#~ msgstr "Dein Video wird verarbeitet"
 
-#: kurz/templates/kurz.html:50
-msgid "Share"
-msgstr "Teilen"
+#~ msgid "characters remaining"
+#~ msgstr "Zeichen übrig"
 
-#: kurz/templates/kurz.html:55
-msgid "Copy link"
-msgstr "Link kopieren"
+#~ msgid "Share"
+#~ msgstr "Teilen"
 
-#: kurz/templates/kurz.html:76
-msgid "Talk!"
-msgstr "Sprich!"
+#~ msgid "Copy link"
+#~ msgstr "Link kopieren"
 
-#: kurz/templates/kurz.html:89
-msgid "Processing video - Please stay on this page"
-msgstr "Video wird verarbeitet - Bitte auf dieser Seite bleiben"
+#~ msgid "Talk!"
+#~ msgstr "Sprich!"
 
-#: kurz/templates/kurz.html:90
-msgid "Your video is ready"
-msgstr "Dein Video ist bereit"
+#~ msgid "Processing video - Please stay on this page"
+#~ msgstr "Video wird verarbeitet - Bitte auf dieser Seite bleiben"
 
-#: kurz/templates/kurz.html:91
-msgid "Error while processing your video - Please try again"
-msgstr "Fehler beim Verarbeiten des Videos, versuch es nochmal"
+#~ msgid "Your video is ready"
+#~ msgstr "Dein Video ist bereit"
 
-#: kurz/templates/kurz.html:93
-msgid "The video link was copied to your clipboard"
-msgstr "Der Videolink wurde in die Zwischenablage kopiert"
+#~ msgid "Error while processing your video - Please try again"
+#~ msgstr "Fehler beim Verarbeiten des Videos, versuch es nochmal"
 
-#: kurz/views.py:23
-msgid "Method forbidden"
-msgstr "Methode nicht erlaubt"
+#~ msgid "The video link was copied to your clipboard"
+#~ msgstr "Der Videolink wurde in die Zwischenablage kopiert"
+
+#~ msgid "Method forbidden"
+#~ msgstr "Methode nicht erlaubt"
 
 #~ msgid ""
 #~ "\n"
