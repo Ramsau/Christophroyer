@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.views.static import serve
 
 import os
@@ -74,17 +74,19 @@ def setRemoteBoot(request):
     if request.method == 'GET':
         return render(request, 'remoteBoot.html')
     else:
+        token = get_object_or_404(m.BootToken, user=request.user)
         command = request.POST.get('set')
         if command in ['Linux', 'LinuxVNC', 'Windows', 'TakeImage', 'ForceShutdown']:
-            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type=command)
+            m.BootSignal.objects.create(ip=request.META.get('REMOTE_ADDR'), type=command, token=token)
             return HttpResponse('set')
         else:
             return HttpResponse('Invalid command: ' + command, status=400)
 
 
-def remoteBoot(request):
+def remoteBoot(request, key):
     # check if a boot signal is younger than a minute
-    newestSignal = m.BootSignal.objects.order_by('-timestamp').first()
+    token = get_object_or_404(m.BootToken, key=key)
+    newestSignal = m.BootSignal.objects.filter(token=token).order_by('-timestamp').first()
     if datetime.datetime.now() - newestSignal.timestamp.replace(tzinfo=None) < datetime.timedelta(minutes=1):
         return HttpResponse(newestSignal.type)
     else:
